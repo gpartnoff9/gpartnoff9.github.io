@@ -13,7 +13,7 @@
       color: #333;
     }
 
-    /* Full-width header with background */
+    /* Full-width header */
     .site-header {
       width: 100%;
       background: linear-gradient(90deg, #e0e0e0, #f9f9f9);
@@ -21,40 +21,44 @@
       text-align: center;
       box-sizing: border-box;
       position: relative;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* subtle header shadow */
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
-    /* Logo image with shadow and underline */
+    /* Logo container */
+    .logo-container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Logo image */
     .logo {
-      width: auto;              
-      height: 80px;             
-      max-width: 90%;          
-      max-height: 120px;       
+      width: 100%;             /* fill container */
+      height: auto;            /* maintain aspect ratio */
+      max-height: 120px;       /* cap height */
       display: block;
       margin: 0 auto;
-      filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.2)); /* subtle drop shadow */
-      border-bottom: 3px solid #2c3e50; /* thin underline under logo */
+      filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.2));
+      border-bottom: 3px solid #2c3e50;
       padding-bottom: 5px;
     }
 
-    /* Tablet / small desktop */
+    /* Responsive adjustments */
     @media (max-width: 1024px) {
       .logo {
-        height: 70px; 
+        max-height: 100px;
       }
     }
 
-    /* Mobile screens */
     @media (max-width: 768px) {
       .logo {
-        height: 60px; 
+        max-height: 80px;
       }
     }
 
-    /* Small phones */
     @media (max-width: 480px) {
       .logo {
-        height: 50px; 
+        max-height: 60px;
       }
     }
 
@@ -66,11 +70,13 @@
       gap: 2rem;
       padding: 0.75rem 0;
     }
+
     nav a {
       color: #ecf0f1;
       text-decoration: none;
       font-weight: bold;
     }
+
     nav a:hover {
       text-decoration: underline;
     }
@@ -81,14 +87,17 @@
       max-width: 960px;
       margin: auto;
     }
+
     section {
       margin-bottom: 2rem;
     }
+
     h2 {
       border-bottom: 2px solid #ccc;
       padding-bottom: 0.5rem;
       color: #2c3e50;
     }
+
     ul {
       list-style-type: square;
       padding-left: 1.5rem;
@@ -104,6 +113,7 @@
       text-decoration: none;
       border-radius: 5px;
     }
+
     .contact-button:hover {
       background-color: #219150;
     }
@@ -119,7 +129,9 @@
 </head>
 <body>
   <header class="site-header">
-    <img src="your-logo.png" alt="MrfixitallOC Logo" class="logo">
+    <div class="logo-container">
+      <img src="your-logo.png" alt="MrfixitallOC Logo" class="logo">
+    </div>
     <nav>
       <a href="index.html">Home</a>
       <a href="work.html">Recent Work</a>
