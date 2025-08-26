@@ -18,19 +18,19 @@
       display: block;
       margin: 0 auto 1rem;
     }
-     header {
-  background-image: url("photos/logo.png"); /* your logo path */
-  background-size: cover;    /* make it span the entire width */
-  background-position: center; /* keep it centered */
+header {
+  background-image: url("photos/logo.png");
+  background-size: contain;     /* show full logo without cropping */
+  background-position: center top;
   background-repeat: no-repeat;
-  height: 200px;             /* adjust banner height */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;              /* make text readable */
-  text-align: center;
-    }
+
+  width: 100%; 
+  aspect-ratio: 3 / 1;          /* responsive scaling for modern browsers */
+
+  /* fallback for browsers without aspect-ratio support */
+  height: 0;
+  padding-top: 33.33%;          /* 1 ÷ 3 = 0.333 = 33.33% (for 3:1 ratio) */
+}
     header p {
       font-size: 1.2rem;
       margin-top: 0.3rem;
@@ -88,10 +88,7 @@
   </style>
 </head>
 <body>
-  <header>
-    <h1>MrfixitallOC</h1>
-    <p>It breaks, We fix it.</p>
-  </header>
+  <header></header>
   <nav>
     <a href="index.html">Home</a>
     <a href="work.html">Recent Work</a>
