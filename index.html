@@ -13,7 +13,7 @@
       color: #333;
     }
 
-    /* Full-width header */
+    /* Header */
     .site-header {
       width: 100%;
       background: linear-gradient(90deg, #e0e0e0, #f9f9f9);
@@ -24,42 +24,21 @@
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
-    /* Logo container */
     .logo-container {
       width: 90%;
       max-width: 1200px;
       margin: 0 auto;
     }
 
-    /* Logo image */
     .logo {
-      width: 100%;             /* fill container */
-      height: auto;            /* maintain aspect ratio */
-      max-height: 120px;       /* cap height */
+      width: 100%;
+      height: auto;
+      max-height: 120px;
       display: block;
       margin: 0 auto;
       filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.2));
       border-bottom: 3px solid #2c3e50;
       padding-bottom: 5px;
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 1024px) {
-      .logo {
-        max-height: 100px;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .logo {
-        max-height: 80px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .logo {
-        max-height: 60px;
-      }
     }
 
     /* Navigation */
@@ -69,16 +48,43 @@
       justify-content: center;
       gap: 2rem;
       padding: 0.75rem 0;
+      flex-wrap: wrap;
+      transition: max-height 0.3s ease;
     }
 
     nav a {
       color: #ecf0f1;
       text-decoration: none;
       font-weight: bold;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: background 0.2s;
     }
 
     nav a:hover {
       text-decoration: underline;
+      background: rgba(255,255,255,0.1);
+    }
+
+    /* Hamburger button */
+    .hamburger {
+      display: none;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 30px;
+      height: 25px;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      display: block;
+      height: 4px;
+      width: 100%;
+      background-color: #2c3e50;
+      border-radius: 2px;
     }
 
     /* Main content */
@@ -103,7 +109,6 @@
       padding-left: 1.5rem;
     }
 
-    /* Contact buttons */
     .contact-button {
       display: inline-block;
       background-color: #27ae60;
@@ -118,61 +123,100 @@
       background-color: #219150;
     }
 
-    /* Footer */
     footer {
       background-color: #34495e;
       color: white;
       padding: 1.5rem;
       text-align: center;
     }
+
+    /* Responsive adjustments */
+    @media (max-width: 1024px) {
+      .logo { max-height: 100px; }
+    }
+
+    @media (max-width: 768px) {
+      .logo { max-height: 80px; }
+      nav {
+        flex-direction: column;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+      }
+      nav.active {
+        max-height: 500px; /* show menu when active */
+      }
+      .hamburger { display: flex; }
+    }
+
+    @media (max-width: 480px) {
+      .logo { max-height: 60px; }
+      nav a { padding: 0.6rem 1rem; font-size: 1rem; }
+    }
   </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="logo-container">
-      <img src="photos/logo.png" alt="MrfixitallOC Logo" class="logo">
-    </div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="work.html">Recent Work</a>
-      <a href="faq.html">Q&A</a>
-      <a href="testimonials.html">Testimonials</a>
-    </nav>
-  </header>
 
-  <main>
-    <section>
-      <h2>About Me</h2>
-      <p>
-        Welcome to MrfixitallOC! I’m Greg, a state-certified journeyman carpenter and OSHA-10 certified professional. 
-        With years of hands-on experience, I specialize in home repairs of all kinds: electrical, plumbing, carpentry, 
-        tile work/repair, lighting, cabinetry, irrigation, landscaping, and much more. If it’s broken, I’ll fix it.
-      </p>
-    </section>
+<header class="site-header">
+  <div class="logo-container">
+    <img src="your-logo.png" alt="MrfixitallOC Logo" class="logo">
+  </div>
 
-    <section>
-      <h2>Credentials & Certifications</h2>
-      <ul>
-        <li>State-Certified Journeyman Carpenter</li>
-        <li>OSHA-10 Certified</li>
-        <li>Extensive Skilled Trades Experience</li>
-      </ul>
-    </section>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 
-    <section>
-      <h2>Our Values</h2>
-      <p>
-        At MrfixitallOC, our work is rooted in integrity, honesty, and care for our clients. 
-        We believe every repair is an opportunity to serve with excellence, treating each home 
-        with respect and every project with dedication. 
-      </p>
-    </section>
-  </main>
+  <nav id="navMenu">
+    <a href="index.html">Home</a>
+    <a href="work.html">Recent Work</a>
+    <a href="faq.html">Q&A</a>
+    <a href="testimonials.html">Testimonials</a>
+  </nav>
+</header>
 
-  <footer>
-    <p>&copy; 2025 MrfixitallOC</p>
-    <a class="contact-button" href="tel:7146616762">Call Now</a>
-    <a class="contact-button" href="mailto:mrfixitalloc@gmail.com">Email Us</a>
-  </footer>
+<main>
+  <section>
+    <h2>About Me</h2>
+    <p>
+      Welcome to MrfixitallOC! I’m Greg, a state-certified journeyman carpenter and OSHA-10 certified professional. 
+      With years of hands-on experience, I specialize in home repairs of all kinds: electrical, plumbing, carpentry, 
+      tile work/repair, lighting, cabinetry, irrigation, landscaping, and much more. If it’s broken, I’ll fix it.
+    </p>
+  </section>
+
+  <section>
+    <h2>Credentials & Certifications</h2>
+    <ul>
+      <li>State-Certified Journeyman Carpenter</li>
+      <li>OSHA-10 Certified</li>
+      <li>Extensive Skilled Trades Experience</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Our Values</h2>
+    <p>
+      At MrfixitallOC, our work is rooted in integrity, honesty, and care for our clients. 
+      We believe every repair is an opportunity to serve with excellence, treating each home 
+      with respect and every project with dedication. 
+    </p>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 MrfixitallOC</p>
+  <a class="contact-button" href="tel:7146616762">Call Now</a>
+  <a class="contact-button" href="mailto:mrfixitalloc@gmail.com">Email Us</a>
+</footer>
+
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById('navMenu');
+    nav.classList.toggle('active');
+  }
+</script>
+
 </body>
 </html>
