@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MrfixitallOC - Home Repairs</title>
   <style>
+    /* General body styles */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -12,28 +13,172 @@
       background: #f4f4f4;
       color: #333;
     }
-/* CSS */
 
-/* Header container */
-.site-header {
-  width: 100%;
-  background-color: #fff;  
-  padding: 15px 0;         
-  text-align: center;      
-  box-sizing: border-box;
-  position: relative;
-  overflow: hidden;
-}
+    /* Header container */
+    .site-header {
+      width: 100%;
+      background-color: #fff;  
+      padding: 15px 0;         
+      text-align: center;      
+      box-sizing: border-box;
+      position: relative;
+      overflow: hidden;
+    }
 
-/* Background accent behind logo */
-.logo-background {
-  display: inline-block;
-  position: relative;
-  padding: 8px 20px;            
-  background: linear-gradient(90deg, #e0e0e0, #f9f9f9); 
-  border-radius: 12px;           
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05); 
-}
+    /* Background accent behind logo */
+    .logo-background {
+      display: inline-block;
+      position: relative;
+      padding: 8px 20px;            
+      background: linear-gradient(90deg, #e0e0e0, #f9f9f9); 
+      border-radius: 12px;           
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05); 
+    }
+
+    /* Logo image */
+    .logo {
+      width: auto;              
+      height: 80px;             
+      max-width: 90%;           
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* Tablet / small desktop */
+    @media (max-width: 1024px) {
+      .logo {
+        height: 70px; 
+      }
+    }
+
+    /* Mobile screens */
+    @media (max-width: 768px) {
+      .logo {
+        height: 60px; 
+      }
+    }
+
+    /* Small phones */
+    @media (max-width: 480px) {
+      .logo {
+        height: 50px; 
+      }
+    }
+
+    /* Header paragraph (if used) */
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.3rem;
+    }
+
+    /* Navigation */
+    nav {
+      background: #2c3e50;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 0.75rem 0;
+    }
+    nav a {
+      color: #ecf0f1;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Main content */
+    main {
+      padding: 2rem;
+      max-width: 960px;
+      margin: auto;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    h2 {
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 0.5rem;
+      color: #2c3e50;
+    }
+    ul {
+      list-style-type: square;
+      padding-left: 1.5rem;
+    }
+
+    /* Contact buttons */
+    .contact-button {
+      display: inline-block;
+      background-color: #27ae60;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      margin: 0.5rem;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .contact-button:hover {
+      background-color: #219150;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #34495e;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo-background">
+      <img src="photos/logo.png" alt="MrfixitallOC Logo" class="logo">
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="work.html">Recent Work</a>
+      <a href="faq.html">Q&A</a>
+      <a href="testimonials.html">Testimonials</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>About Me</h2>
+      <p>
+        Welcome to MrfixitallOC! I’m Greg, a state-certified journeyman carpenter and OSHA-10 certified professional. 
+        With years of hands-on experience, I specialize in home repairs of all kinds: electrical, plumbing, carpentry, 
+        tile work/repair, lighting, cabinetry, irrigation, landscaping, and much more. If it’s broken, I’ll fix it.
+      </p>
+    </section>
+
+    <section>
+      <h2>Credentials & Certifications</h2>
+      <ul>
+        <li>State-Certified Journeyman Carpenter</li>
+        <li>OSHA-10 Certified</li>
+        <li>Extensive Skilled Trades Experience</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Our Values</h2>
+      <p>
+        At MrfixitallOC, our work is rooted in integrity, honesty, and care for our clients. 
+        We believe every repair is an opportunity to serve with excellence, treating each home 
+        with respect and every project with dedication. 
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 MrfixitallOC</p>
+    <a class="contact-button" href="tel:7146616762">Call Now</a>
+    <a class="contact-button" href="mailto:mrfixitalloc@gmail.com">Email Us</a>
+  </footer>
+</body>
+</html>
 
 /* Logo image */
 .logo {
