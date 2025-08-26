@@ -18,11 +18,18 @@
       display: block;
       margin: 0 auto 1rem;
     }
-    header {
-      background-color: #ffffff;
-      color: #34495e;
-      padding: 1.5rem;
-      text-align: center;
+     header {
+  background-image: url("photos/logo.png"); /* your logo path */
+  background-size: cover;    /* make it span the entire width */
+  background-position: center; /* keep it centered */
+  background-repeat: no-repeat;
+  height: 200px;             /* adjust banner height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;              /* make text readable */
+  text-align: center;
     }
     header p {
       font-size: 1.2rem;
@@ -82,9 +89,8 @@
 </head>
 <body>
   <header>
-    <img src="photos/logo.png" alt="MrFixItAllOC Logo" class="logo" />
-    <h1>MrfixitallOC</h1>
-    <p>It breaks, We fix it.</p>
+    <h1></h1>
+    <p></p>
   </header>
   <nav>
     <a href="index.html">Home</a>
