@@ -18,19 +18,33 @@
       display: block;
       margin: 0 auto 1rem;
     }
-header {
-  background-image: url("photos/logo.png");
-  background-size: contain;     /* show full logo without cropping */
-  background-position: center top;
-  background-repeat: no-repeat;
+/* CSS */
 
-  width: 100%; 
-  aspect-ratio: 1 / 1;          /* responsive scaling for modern browsers */
-
-  /* fallback for browsers without aspect-ratio support */
-  height: 0;
-  padding-top: 100%;          /* 1 ÷ 3 = 0.333 = 33.33% (for 3:1 ratio) */
+/* Header container */
+.site-header {
+  width: 100vw;           /* Full viewport width */
+  background-color: #fff; /* White background for contrast */
+  padding: 10px 0;        /* Optional: vertical spacing */
+  box-sizing: border-box;
+  text-align: center;     /* Center logo */
+  overflow: hidden;       /* Prevent scrollbars if logo slightly overflows */
 }
+
+/* Logo image */
+.logo {
+  width: 100%;            /* Stretch across the header */
+  max-width: 1200px;      /* Prevent it from being enormous on very large screens */
+  height: auto;           /* Keep proportions */
+  display: inline-block;
+}
+
+/* Responsive scaling for smaller screens */
+@media (max-width: 768px) {
+  .logo {
+    max-width: 90%;       /* Leave small padding on mobile */
+  }
+}
+
     header p {
       font-size: 1.2rem;
       margin-top: 0.3rem;
@@ -88,7 +102,10 @@ header {
   </style>
 </head>
 <body>
-  <header></header>
+<header class="site-header">
+  <img src="photos/logo.png" alt="MrfixitallOC Logo" class="logo">
+</header>
+/header>
   <nav>
     <a href="index.html">Home</a>
     <a href="work.html">Recent Work</a>
