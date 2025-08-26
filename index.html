@@ -22,27 +22,58 @@
 
 /* Header container */
 .site-header {
-  width: 100vw;           /* Full viewport width */
-  background-color: #fff; /* White background for contrast */
-  padding: 10px 0;        /* Optional: vertical spacing */
+  width: 100%;
+  background-color: #fff;  /* Base header color */
+  padding: 20px 0;         /* Space above and below */
+  text-align: center;      
   box-sizing: border-box;
-  text-align: center;     /* Center logo */
-  overflow: hidden;       /* Prevent scrollbars if logo slightly overflows */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background accent behind logo */
+.logo-background {
+  display: inline-block;
+  position: relative;
+  padding: 10px 30px;            /* Space around logo */
+  background: linear-gradient(90deg, #e0e0e0, #f9f9f9); /* subtle gradient */
+  border-radius: 15px;           /* Rounded edges for modern feel */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Soft shadow behind background */
 }
 
 /* Logo image */
 .logo {
-  width: 100%;            /* Stretch across the header */
-  max-width: 1200px;      /* Prevent it from being enormous on very large screens */
-  height: auto;           /* Keep proportions */
-  display: inline-block;
+  width: 50%;         /* Balanced width */
+  max-width: 350px;   /* Prevent it from being too big */
+  height: auto;       /* Keep aspect ratio */
+  display: block;
+  margin: 0 auto;
 }
 
-/* Responsive scaling for smaller screens */
+/* Tablet / small desktop */
+@media (max-width: 1024px) {
+  .logo {
+    width: 60%;
+    max-width: 300px;
+  }
+}
+
+/* Mobile screens */
 @media (max-width: 768px) {
   .logo {
-    max-width: 90%;       /* Leave small padding on mobile */
+    width: 70%;
+    max-width: 250px;
   }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .logo {
+    width: 80%;
+    max-width: 200px;
+  }
+}
+
 }
 
     header p {
@@ -103,7 +134,9 @@
 </head>
 <body>
 <header class="site-header">
-  <img src="photos/logo.png" alt="MrfixitallOC Logo" class="logo">
+  <div class="logo-background">
+    <img src="your-logo.png" alt="MrfixitallOC Logo" class="logo">
+  </div>
 </header>
   <nav>
     <a href="index.html">Home</a>
