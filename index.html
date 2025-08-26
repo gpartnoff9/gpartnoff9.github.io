@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MrfixitallOC - Home Repairs</title>
   <style>
-    /* General body styles */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -14,34 +13,28 @@
       color: #333;
     }
 
-    /* Header container */
+    /* Full-width header with background */
     .site-header {
       width: 100%;
-      background-color: #fff;  
-      padding: 15px 0;         
-      text-align: center;      
+      background: linear-gradient(90deg, #e0e0e0, #f9f9f9);
+      padding: 15px 0 10px 0;
+      text-align: center;
       box-sizing: border-box;
       position: relative;
-      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* subtle header shadow */
     }
 
-    /* Background accent behind logo */
-    .logo-background {
-      display: inline-block;
-      position: relative;
-      padding: 8px 20px;            
-      background: linear-gradient(90deg, #e0e0e0, #f9f9f9); 
-      border-radius: 12px;           
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05); 
-    }
-
-    /* Logo image */
+    /* Logo image with shadow and underline */
     .logo {
       width: auto;              
       height: 80px;             
-      max-width: 90%;           
+      max-width: 90%;          
+      max-height: 120px;       
       display: block;
       margin: 0 auto;
+      filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.2)); /* subtle drop shadow */
+      border-bottom: 3px solid #2c3e50; /* thin underline under logo */
+      padding-bottom: 5px;
     }
 
     /* Tablet / small desktop */
@@ -63,12 +56,6 @@
       .logo {
         height: 50px; 
       }
-    }
-
-    /* Header paragraph (if used) */
-    header p {
-      font-size: 1.2rem;
-      margin-top: 0.3rem;
     }
 
     /* Navigation */
@@ -132,9 +119,7 @@
 </head>
 <body>
   <header class="site-header">
-    <div class="logo-background">
-      <img src="photos/logo.png" alt="MrfixitallOC Logo" class="logo">
-    </div>
+    <img src="your-logo.png" alt="MrfixitallOC Logo" class="logo">
     <nav>
       <a href="index.html">Home</a>
       <a href="work.html">Recent Work</a>
