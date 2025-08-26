@@ -23,8 +23,8 @@
 /* Header container */
 .site-header {
   width: 100%;
-  background-color: #fff;  /* Base header color */
-  padding: 20px 0;         /* Space above and below */
+  background-color: #fff;  
+  padding: 15px 0;         
   text-align: center;      
   box-sizing: border-box;
   position: relative;
@@ -35,17 +35,17 @@
 .logo-background {
   display: inline-block;
   position: relative;
-  padding: 10px 30px;            /* Space around logo */
-  background: linear-gradient(90deg, #e0e0e0, #f9f9f9); /* subtle gradient */
-  border-radius: 15px;           /* Rounded edges for modern feel */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Soft shadow behind background */
+  padding: 8px 20px;            
+  background: linear-gradient(90deg, #e0e0e0, #f9f9f9); 
+  border-radius: 12px;           
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05); 
 }
 
 /* Logo image */
 .logo {
-  width: 50%;         /* Balanced width */
-  max-width: 350px;   /* Prevent it from being too big */
-  height: auto;       /* Keep aspect ratio */
+  width: auto;              /* Auto width keeps aspect ratio */
+  height: 80px;             /* Balanced height for desktop */
+  max-width: 90%;           /* Prevent overflow on smaller screens */
   display: block;
   margin: 0 auto;
 }
@@ -53,29 +53,23 @@
 /* Tablet / small desktop */
 @media (max-width: 1024px) {
   .logo {
-    width: 60%;
-    max-width: 300px;
+    height: 70px;           /* Slightly smaller */
   }
 }
 
 /* Mobile screens */
 @media (max-width: 768px) {
   .logo {
-    width: 70%;
-    max-width: 250px;
+    height: 60px;           /* Reduce for tablets/phones */
   }
 }
 
 /* Small phones */
 @media (max-width: 480px) {
   .logo {
-    width: 80%;
-    max-width: 200px;
+    height: 50px;           /* Smallest screens */
   }
 }
-
-}
-
     header p {
       font-size: 1.2rem;
       margin-top: 0.3rem;
