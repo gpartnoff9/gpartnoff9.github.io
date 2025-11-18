@@ -5,85 +5,386 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Q&A - MrfixitallOC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    * {
       margin: 0;
       padding: 0;
-      background: #f4f4f4;
-      color: #333;
+      box-sizing: border-box;
     }
-    header, footer {
-      background-color: #34495e;
-      color: white;
-      padding: 1.5rem;
-      text-align: center;
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #f8f9fa;
+      color: #2c3e50;
+      line-height: 1.6;
     }
-    nav {
+
+    /* Navigation */
+    .navbar {
       background: #2c3e50;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 0.75rem 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
-    nav a {
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    .logo-link {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: #ecf0f1;
+      font-weight: 700;
+      font-size: 1.25rem;
+    }
+
+    .logo-img {
+      height: 50px;
+      width: auto;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      list-style: none;
+    }
+
+    .nav-menu a {
       color: #ecf0f1;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
-    nav a:hover {
-      text-decoration: underline;
+
+    .nav-menu a:hover {
+      background: rgba(255,255,255,0.1);
+      transform: translateY(-2px);
     }
-    main {
-      padding: 2rem;
-      max-width: 960px;
-      margin: auto;
-    }
-    h3 {
-      color: #2c3e50;
-    }
-    .contact-button {
-      display: inline-block;
-      background-color: #27ae60;
+
+    /* Page Header */
+    .page-header {
+      background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
       color: white;
-      padding: 0.6rem 1.2rem;
-      margin: 0.5rem;
-      text-decoration: none;
-      border-radius: 5px;
+      padding: 3rem 2rem;
+      text-align: center;
     }
-    .contact-button:hover {
-      background-color: #219150;
+
+    .page-header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .page-header p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    /* Main content */
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    .faq-container {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .faq-item {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+      transition: all 0.3s ease;
+      border: 1px solid #e0e0e0;
+    }
+
+    .faq-item:hover {
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      transform: translateY(-2px);
+    }
+
+    .faq-item h3 {
+      color: #2c3e50;
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+
+    .faq-icon {
+      width: 24px;
+      height: 24px;
+      color: #A0522D;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .faq-item p {
+      color: #555;
+      line-height: 1.7;
+      padding-left: 2rem;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.875rem 1.75rem;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: none;
+      font-size: 1rem;
+    }
+
+    .btn-primary {
+      background-color: #A0522D;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background-color: #8B4513;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(160, 82, 45, 0.4);
+    }
+
+    .btn-icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      padding: 2.5rem 2rem;
+      margin-top: 4rem;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .footer-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    /* Hamburger menu */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background-color: #ecf0f1;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hamburger {
+        display: flex;
+      }
+
+      .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #2c3e50;
+        flex-direction: column;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+      }
+
+      .nav-menu.active {
+        max-height: 400px;
+        border-top: 1px solid rgba(255,255,255,0.1);
+      }
+
+      .nav-menu a {
+        width: 100%;
+        padding: 1rem 2rem;
+        border-radius: 0;
+      }
+
+      .page-header h1 {
+        font-size: 2rem;
+      }
+
+      .logo-img {
+        height: 40px;
+      }
+
+      .logo-link span {
+        display: none;
+      }
+
+      .faq-item p {
+        padding-left: 0;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Q&A</h1>
-    <p>Frequently Asked Questions</p>
-  </header>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="work.html">Recent Work</a>
-    <a href="faq.html">Q&A</a>
-    <a href="testimonials.html">Testimonials</a>
-  </nav>
-  <main>
-    <h3>What areas do you serve?</h3>
-    <p>I primarily serve Orange County and surrounding areas. Feel free to call to confirm availability.</p>
 
-    <h3>Do you offer free estimates?</h3>
-    <p>Yes. Estimates are free and honest — no hidden fees or surprise charges.</p>
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo-link">
+      <img src="photos/logo.png" alt="MrfixitallOC Logo" class="logo-img">
+      <span>MrfixitallOC</span>
+    </a>
 
-    <h3>What kinds of projects do you specialize in?</h3>
-    <p>From electrical and plumbing to carpentry, tile, furniture, and general home repairs — I cover it all.</p>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
 
-    <h3>How do I schedule an appointment?</h3>
-    <p>You can call or email directly using the contact buttons below.</p>
-  </main>
-  <footer>
-    <p>&copy; 2025 MrfixitallOC</p>
-    <a class="contact-button" href="tel:7146616762">Call Now</a>
-    <a class="contact-button" href="mailto:mrfixitalloc@gmail.com">Email Us</a>
-  </footer>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html">
+        <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+          <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+        </svg>
+        Home
+      </a></li>
+      <li><a href="work.html">
+        <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+          <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
+        </svg>
+        Recent Work
+      </a></li>
+      <li><a href="faq.html">
+        <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+        </svg>
+        Q&A
+      </a></li>
+      <li><a href="testimonials.html">
+        <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+          <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+        </svg>
+        Testimonials
+      </a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-header">
+  <h1>Q&A</h1>
+  <p>Frequently Asked Questions</p>
+</div>
+
+<main>
+  <div class="faq-container">
+    <div class="faq-item">
+      <h3>
+        <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+          <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+        </svg>
+        What areas do you serve?
+      </h3>
+      <p>I primarily serve Orange County and surrounding areas. Feel free to call to confirm availability.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>
+        <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+          <path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+        Do you offer free estimates?
+      </h3>
+      <p>Yes. Estimates are free and honest — no hidden fees or surprise charges.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>
+        <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+          <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+        </svg>
+        What kinds of projects do you specialize in?
+      </h3>
+      <p>From electrical and plumbing to carpentry, tile, furniture, and general home repairs — I cover it all.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>
+        <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+          <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        How do I schedule an appointment?
+      </h3>
+      <p>You can call or email directly using the contact buttons below.</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-content">
+    <p>&copy; 2025 MrfixitallOC - Professional Home Repairs in Orange County</p>
+    <div class="footer-buttons">
+      <a href="tel:7146616762" class="btn btn-primary">
+        <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+          <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+        </svg>
+        Call Now
+      </a>
+      <a href="mailto:mrfixitalloc@gmail.com" class="btn btn-primary">
+        <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+          <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+        </svg>
+        Email Us
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById('navMenu');
+    nav.classList.toggle('active');
+  }
+</script>
+
 </body>
 </html>
