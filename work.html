@@ -1,100 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Recent Work - MrfixitallOC</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    /* Styles omitted for brevity */
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+    }
+    main {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .section {
+      margin-bottom: 3rem;
+    }
+    .section-title a {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #2c3e50;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      border-bottom: 3px solid #A0522D;
+    }
     .section-title a:hover {
-      text-decoration: underline;
       color: #A0522D;
+      text-decoration: underline;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+    .photo-card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .photo-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .photo-caption {
+      padding: 1rem;
+    }
+    .photo-caption h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.1rem;
+    }
+    .photo-caption p {
+      margin: 0;
+      color: #555;
     }
   </style>
 </head>
 <body>
-  <!-- Navbar and header omitted for brevity -->
-
   <main>
+    <!-- Painting -->
     <section class="section">
       <h2 class="section-title">
-        <a href="gallery-painting.html">
-          <svg class="section-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-            <path d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
-          </svg>
-          Painting
-        </a>
+        <a href="gallery-painting.html">Painting</a>
       </h2>
       <div class="gallery">
-        <!-- Two images -->
+        <div class="photo-card">
+          <img src="photos/Paint.jpg" alt="Painting Project">
+          <div class="photo-caption">
+            <h3>Fresh Paint Job</h3>
+            <p>Clean and bright modern look</p>
+          </div>
+        </div>
+        <div class="photo-card">
+          <img src="photos/Paint2.jpg" alt="Accent Wall">
+          <div class="photo-caption">
+            <h3>Accent Wall</h3>
+            <p>Feature wall added to enhance depth</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Repeat similar block for each category -->
+    <!-- Plumbing -->
     <section class="section">
       <h2 class="section-title">
-        <a href="gallery-plumbing.html">
-          <!-- Icon -->
-          Plumbing
-        </a>
+        <a href="gallery-plumbing.html">Plumbing</a>
       </h2>
       <div class="gallery">
-        <!-- Two images -->
+        <div class="photo-card">
+          <img src="photos/Angle-stop.jpg" alt="Angle Stop">
+          <div class="photo-caption">
+            <h3>Angle Valve Replacement</h3>
+            <p>Updated with quarter-turn shutoff</p>
+          </div>
+        </div>
+        <div class="photo-card">
+          <img src="photos/Newtoliet1.jpg" alt="Toilet Install">
+          <div class="photo-caption">
+            <h3>Toilet Install</h3>
+            <p>Brand new low-flow toilet setup</p>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- Electrical -->
     <section class="section">
       <h2 class="section-title">
-        <a href="gallery-electrical.html">
-          <!-- Icon -->
-          Electrical
-        </a>
+        <a href="gallery-electrical.html">Electrical</a>
       </h2>
       <div class="gallery">
-        <!-- Two images -->
+        <div class="photo-card">
+          <img src="photos/Hood-fixture.jpg" alt="Light Fixture">
+          <div class="photo-caption">
+            <h3>Bathroom Fixture</h3>
+            <p>New fan/light combo installed</p>
+          </div>
+        </div>
+        <div class="photo-card">
+          <img src="photos/Outlet.jpg" alt="Outlet Upgrade">
+          <div class="photo-caption">
+            <h3>Outlet Upgrade</h3>
+            <p>Modern tamper-proof outlet installed</p>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- Carpentry -->
     <section class="section">
       <h2 class="section-title">
-        <a href="gallery-carpentry.html">
-          <!-- Icon -->
-          Carpentry
-        </a>
+        <a href="gallery-carpentry.html">Carpentry</a>
       </h2>
       <div class="gallery">
-        <!-- Two images -->
+        <div class="photo-card">
+          <img src="photos/Drywall.jpg" alt="Drywall Install">
+          <div class="photo-caption">
+            <h3>Drywall Work</h3>
+            <p>New pony wall with corner bead</p>
+          </div>
+        </div>
+        <div class="photo-card">
+          <img src="photos/Stair-landing1.jpg" alt="Stair Subfloor">
+          <div class="photo-caption">
+            <h3>Stair Subfloor Repair</h3>
+            <p>Pet-damaged floor replaced</p>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- Repair Work -->
     <section class="section">
       <h2 class="section-title">
-        <a href="gallery-repair.html">
-          <!-- Icon -->
-          Repair Work
-        </a>
+        <a href="gallery-repair.html">Repair Work</a>
       </h2>
       <div class="gallery">
-        <!-- Two images -->
+        <div class="photo-card">
+          <img src="photos/Concrete-Patch.jpg" alt="Concrete Patch">
+          <div class="photo-caption">
+            <h3>Concrete Patch</h3>
+            <p>Leveled and blended for smooth finish</p>
+          </div>
+        </div>
+        <div class="photo-card">
+          <img src="photos/Repair2.jpg" alt="Misc Repair">
+          <div class="photo-caption">
+            <h3>Surface Repair</h3>
+            <p>Crack fixed and reinforced</p>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- Furniture Building -->
     <section class="section">
       <h2 class="section-title">
-        <a href="gallery-furniture.html">
-          <!-- Icon -->
-          Furniture Building
-        </a>
+        <a href="gallery-furniture.html">Furniture Building</a>
       </h2>
       <div class="gallery">
-        <!-- Two images -->
+        <div class="photo-card">
+          <img src="photos/Furniturebuild1.jpg" alt="Kitchen Island">
+          <div class="photo-caption">
+            <h3>Kitchen Island</h3>
+            <p>Assembled and installed custom island</p>
+          </div>
+        </div>
+        <div class="photo-card">
+          <img src="photos/Furniturebuild3.jpg" alt="Closet System">
+          <div class="photo-caption">
+            <h3>Closet System</h3>
+            <p>Modern modular closet build</p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
-
-  <!-- Footer and scripts omitted for brevity -->
 </body>
 </html>
