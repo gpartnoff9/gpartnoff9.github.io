@@ -1,210 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Recent Work - MrfixitallOC</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f8f9fa;
-    }
-    main {
-      padding: 2rem;
-      max-width: 1200px;
-      margin: auto;
-    }
-    .section {
-      margin-bottom: 3rem;
-    }
     .section-title a {
-      font-size: 1.75rem;
-      font-weight: 700;
-      color: #2c3e50;
       text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.75rem;
-      border-bottom: 3px solid #A0522D;
+      color: inherit;
+      transition: color 0.3s;
     }
     .section-title a:hover {
       color: #A0522D;
-      text-decoration: underline;
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1rem;
-    }
-    .photo-card {
-      background: #fff;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-    .photo-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-    .photo-caption {
-      padding: 1rem;
-    }
-    .photo-caption h3 {
-      margin: 0 0 0.5rem;
-      font-size: 1.1rem;
-    }
-    .photo-caption p {
-      margin: 0;
-      color: #555;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-  <main>
-    <!-- Painting -->
-    <section class="section">
-      <h2 class="section-title">
-        <a href="gallery-painting.html">Painting</a>
-      </h2>
-      <div class="gallery">
-        <div class="photo-card">
-          <img src="photos/Paint.jpg" alt="Painting Project">
-          <div class="photo-caption">
-            <h3>Fresh Paint Job</h3>
-            <p>Clean and bright modern look</p>
-          </div>
-        </div>
-        <div class="photo-card">
-          <img src="photos/Paint2.jpg" alt="Accent Wall">
-          <div class="photo-caption">
-            <h3>Accent Wall</h3>
-            <p>Feature wall added to enhance depth</p>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Plumbing -->
-    <section class="section">
-      <h2 class="section-title">
-        <a href="gallery-plumbing.html">Plumbing</a>
-      </h2>
-      <div class="gallery">
-        <div class="photo-card">
-          <img src="photos/Angle-stop.jpg" alt="Angle Stop">
-          <div class="photo-caption">
-            <h3>Angle Valve Replacement</h3>
-            <p>Updated with quarter-turn shutoff</p>
-          </div>
-        </div>
-        <div class="photo-card">
-          <img src="photos/Newtoliet1.jpg" alt="Toilet Install">
-          <div class="photo-caption">
-            <h3>Toilet Install</h3>
-            <p>Brand new low-flow toilet setup</p>
-          </div>
-        </div>
-      </div>
-    </section>
+<!-- Navigation -->
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo-link">
+      <img src="photos/logo.png" alt="MrfixitallOC Logo" class="logo-img">
+      <span>MrfixitallOC</span>
+    </a>
 
-    <!-- Electrical -->
-    <section class="section">
-      <h2 class="section-title">
-        <a href="gallery-electrical.html">Electrical</a>
-      </h2>
-      <div class="gallery">
-        <div class="photo-card">
-          <img src="photos/Hood-fixture.jpg" alt="Light Fixture">
-          <div class="photo-caption">
-            <h3>Bathroom Fixture</h3>
-            <p>New fan/light combo installed</p>
-          </div>
-        </div>
-        <div class="photo-card">
-          <img src="photos/Outlet.jpg" alt="Outlet Upgrade">
-          <div class="photo-caption">
-            <h3>Outlet Upgrade</h3>
-            <p>Modern tamper-proof outlet installed</p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
 
-    <!-- Carpentry -->
-    <section class="section">
-      <h2 class="section-title">
-        <a href="gallery-carpentry.html">Carpentry</a>
-      </h2>
-      <div class="gallery">
-        <div class="photo-card">
-          <img src="photos/Drywall.jpg" alt="Drywall Install">
-          <div class="photo-caption">
-            <h3>Drywall Work</h3>
-            <p>New pony wall with corner bead</p>
-          </div>
-        </div>
-        <div class="photo-card">
-          <img src="photos/Stair-landing1.jpg" alt="Stair Subfloor">
-          <div class="photo-caption">
-            <h3>Stair Subfloor Repair</h3>
-            <p>Pet-damaged floor replaced</p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="work.html">Recent Work</a></li>
+      <li><a href="faq.html">Q&A</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
+    </ul>
+  </div>
+</nav>
 
-    <!-- Repair Work -->
-    <section class="section">
-      <h2 class="section-title">
-        <a href="gallery-repair.html">Repair Work</a>
-      </h2>
-      <div class="gallery">
-        <div class="photo-card">
-          <img src="photos/Concrete-Patch.jpg" alt="Concrete Patch">
-          <div class="photo-caption">
-            <h3>Concrete Patch</h3>
-            <p>Leveled and blended for smooth finish</p>
-          </div>
-        </div>
-        <div class="photo-card">
-          <img src="photos/Repair2.jpg" alt="Misc Repair">
-          <div class="photo-caption">
-            <h3>Surface Repair</h3>
-            <p>Crack fixed and reinforced</p>
-          </div>
-        </div>
-      </div>
-    </section>
+<!-- Header -->
+<div class="page-header">
+  <h1>Recent Work</h1>
+  <p>Photo Gallery of Completed Projects</p>
+</div>
 
-    <!-- Furniture Building -->
-    <section class="section">
-      <h2 class="section-title">
-        <a href="gallery-furniture.html">Furniture Building</a>
-      </h2>
-      <div class="gallery">
-        <div class="photo-card">
-          <img src="photos/Furniturebuild1.jpg" alt="Kitchen Island">
-          <div class="photo-caption">
-            <h3>Kitchen Island</h3>
-            <p>Assembled and installed custom island</p>
-          </div>
-        </div>
-        <div class="photo-card">
-          <img src="photos/Furniturebuild3.jpg" alt="Closet System">
-          <div class="photo-caption">
-            <h3>Closet System</h3>
-            <p>Modern modular closet build</p>
-          </div>
+<!-- Main Content -->
+<main>
+  <!-- Painting -->
+  <section class="section">
+    <h2 class="section-title">
+      <a href="gallery-painting.html">
+        <svg class="section-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+          <path d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
+        </svg>
+        Painting
+      </a>
+    </h2>
+    <div class="gallery">
+      <div class="photo-card">
+        <img src="photos/Paint.jpg" alt="Painting Project" />
+        <div class="photo-caption">
+          <h3>Fresh Paint Job</h3>
+          <p>New paint application for a clean, updated look</p>
         </div>
       </div>
-    </section>
-  </main>
+      <div class="photo-card">
+        <img src="photos/Paint2.jpg" alt="Accent Wall" />
+        <div class="photo-caption">
+          <h3>Accent Wall</h3>
+          <p>Bold feature wall in living room</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Plumbing -->
+  <section class="section">
+    <h2 class="section-title">
+      <a href="gallery-plumbing.html">
+        <svg class="section-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+          <path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+        </svg>
+        Plumbing
+      </a>
+    </h2>
+    <div class="gallery">
+      <div class="photo-card">
+        <img src="photos/Angle-stop.jpg" alt="Angle Valve" />
+        <div class="photo-caption">
+          <h3>Angle Valve Replacement</h3>
+          <p>Updated plumbing with modern shutoff valves</p>
+        </div>
+      </div>
+      <div class="photo-card">
+        <img src="photos/Newtoliet1.jpg" alt="Toilet Installation" />
+        <div class="photo-caption">
+          <h3>Toilet Installation</h3>
+          <p>Eco-friendly dual flush system</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Electrical -->
+  <section class="section">
+    <h2 class="section-title">
+      <a href="gallery-electrical.html">
+        <svg class="section-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+          <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+        </svg>
+        Electrical
+      </a>
+    </h2>
+    <div class="gallery">
+      <div class="photo-card">
+        <img src="photos/Hood-fixture.jpg" alt="Fixture" />
+        <div class="photo-caption">
+          <h3>Bathroom Fixture</h3>
+          <p>Replaced fan/light combo for better ventilation</p>
+        </div>
+      </div>
+      <div class="photo-card">
+        <img src="photos/Outlet.jpg" alt="GFCI Outlet" />
+        <div class="photo-caption">
+          <h3>GFCI Outlet Upgrade</h3>
+          <p>Installed new safety outlets in kitchen</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Carpentry -->
+  <section class="section">
+    <h2 class="section-title">
+      <a href="gallery-carpentry.html">
+        <svg class="section-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+          <path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+        </svg>
+        Carpentry
+      </a>
+    </h2>
+    <div class="gallery">
+      <div class="photo-card">
+        <img src="photos/Drywall.jpg" alt="Drywall Repair" />
+        <div class="photo-caption">
+          <h3>Drywall Installation</h3>
+          <p>Pony wall drywalled and textured</p>
+        </div>
+      </div>
+      <div class="photo-card">
+        <img src="photos/Stair-landing1.jpg" alt="Subfloor" />
+        <div class="photo-caption">
+          <h3>Subfloor Repair</h3>
+          <p>Removed pet-stained wood and replaced</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Repair Work -->
+  <section class="section">
+    <h2 class="section-title">
+      <a href="gallery-repair.html">
+        <svg class="section-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+          <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+        </svg>
+        Repair Work
+      </a>
+    </h2>
+    <div class="gallery">
+      <div class="photo-card">
+        <img src="photos/Concrete-Patch.jpg" alt="Concrete Patch" />
+        <div class="photo-caption">
+          <h3>Custom Patch</h3>
+          <p>Blended concrete into brick path</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Furniture Building -->
+  <section class="section">
+    <h2 class="section-title">
+      <a href="gallery-furniture.html">
+        <svg class="section-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+          <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+        Furniture Building
+      </a>
+    </h2>
+    <div class="gallery">
+      <div class="photo-card">
+        <img src="photos/Furniturebuild1.jpg" alt="Kitchen Island" />
+        <div class="photo-caption">
+          <h3>Kitchen Island</h3>
+          <p>Assembled and delivered flat-pack island</p>
+        </div>
+      </div>
+      <div class="photo-card">
+        <img src="photos/Furniturebuild3.jpg" alt="Closet System" />
+        <div class="photo-caption">
+          <h3>Closet Build</h3>
+          <p>Installed modern closet organization system</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-content">
+    <p>&copy; 2025 MrfixitallOC - Professional Home Repairs in Orange County</p>
+    <div class="footer-buttons">
+      <a href="tel:7146616762" class="btn btn-primary">Call Now</a>
+      <a href="mailto:mrfixitalloc@gmail.com" class="btn btn-primary">Email Us</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById('navMenu');
+    nav.classList.toggle('active');
+  }
+</script>
+
 </body>
 </html>
