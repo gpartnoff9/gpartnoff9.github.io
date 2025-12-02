@@ -1,71 +1,144 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2638
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 LucidaGrande;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carpentry Projects - MrfixitallOC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f8f9fa;
+      color: #2c3e50;
+      line-height: 1.6;
+    }
+    .navbar {
+      background: #2c3e50;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .page-header {
+      background: linear-gradient(135deg, #2c3e50, #34495e);
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .page-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .back-link {
+      display: inline-block;
+      margin: 2rem;
+      color: #A0522D;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    .photo-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+      transition: all 0.3s ease;
+    }
+    .photo-card:hover {
+      transform: translateY(-5px);
+    }
+    .photo-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    .photo-caption {
+      padding: 1.25rem;
+    }
+    .photo-caption h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html">MrfixitallOC</a>
+    <a href="work.html">Recent Work</a>
+  </nav>
 
-\f0\fs24 \cf0 <!DOCTYPE html>\
-<html lang="en">\
-<head>\
-  <meta charset="UTF-8" />\
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />\
-  <title>Carpentry Projects - MrfixitallOC</title>\
-  <link rel="stylesheet" href="style.css" />\
-</head>\
-<body>\
-  <nav class="navbar">\
-    <div class="nav-container">\
-      <a href="index.html" class="logo-link">\
-        <img src="photos/logo.png" alt="MrfixitallOC Logo" class="logo-img" />\
-        <span>MrfixitallOC</span>\
-      </a>\
-    </div>\
-  </nav>\
-\
-  <div class="page-header">\
-    <h1>Carpentry Projects</h1>\
-    <p>Gallery of carpentry and drywall work</p>\
-    <a href="photos.html" class="btn btn-primary">
-\f1 \uc0\u8592 
-\f0  Back to Categories</a>\
-  </div>\
-\
-  <main>\
-    <section class="section">\
-      <div class="gallery">\
-        <div class="photo-card">\
-          <img src="photos/Drywall.jpg" alt="Drywall Installation" />\
-          <div class="photo-caption">\
-            <h3>Drywall Installation</h3>\
-            <p>Installed new drywall on pony wall</p>\
-          </div>\
-        </div>\
-\
-        <div class="photo-card">\
-          <img src="photos/Stair-landing1.jpg" alt="Subfloor Repair" />\
-          <div class="photo-caption">\
-            <h3>Stair Landing Repair</h3>\
-            <p>Replaced stair landing subfloor due to pet stains</p>\
-          </div>\
-        </div>\
-\
-        <div class="photo-card">\
-          <img src="photos/Showerenclosure1.jpg" alt="Shower Enclosure" />\
-          <div class="photo-caption">\
-            <h3>Shower Enclosure</h3>\
-            <p>Installed new framed shower enclosure</p>\
-          </div>\
-        </div>\
-      </div>\
-    </section>\
-  </main>\
-\
-  <footer>\
-    <div class="footer-content">\
-      <p>&copy; 2025 MrfixitallOC - Professional Home Repairs in Orange County</p>\
-    </div>\
-  </footer>\
-</body>\
-</html>\
-Gallery-carpentryu}
+  <div class="page-header">
+    <h1>Carpentry Projects</h1>
+    <p>View recent carpentry and structural projects</p>
+  </div>
+
+  <a href="work.html" class="back-link">&larr; Back to Recent Work</a>
+
+  <div class="gallery">
+    <div class="photo-card">
+      <img src="photos/Drywall.jpg" alt="Drywall Installation" />
+      <div class="photo-caption">
+        <h3>Drywall Installation</h3>
+        <p>Installed drywall on pony wall to match finish.</p>
+      </div>
+    </div>
+    <div class="photo-card">
+      <img src="photos/Saloncarpentry1.jpg" alt="Salon Carpentry" />
+      <div class="photo-caption">
+        <h3>Salon Renovation</h3>
+        <p>Custom carpentry work done in commercial salon space.</p>
+      </div>
+    </div>
+    <div class="photo-card">
+      <img src="photos/Screendoor1.jpg" alt="Screen Door" />
+      <div class="photo-caption">
+        <h3>Screen Door Replacement</h3>
+        <p>New screen door installed with precise frame fitting.</p>
+      </div>
+    </div>
+    <div class="photo-card">
+      <img src="photos/Showerenclosure1.jpg" alt="Shower Enclosure" />
+      <div class="photo-caption">
+        <h3>Shower Enclosure</h3>
+        <p>Built and installed shower enclosure for upgraded bathroom.</p>
+      </div>
+    </div>
+    <div class="photo-card">
+      <img src="photos/Stair-landing1.jpg" alt="Stair Landing Repair" />
+      <div class="photo-caption">
+        <h3>Stair Landing Repair</h3>
+        <p>Replaced damaged stair landing subfloor and refinished.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 MrfixitallOC - All Rights Reserved</p>
+  </footer>
+</body>
+</html>
