@@ -3,107 +3,207 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MrfixitallOC - Recent Work</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <title>Recent Work - MrfixitallOC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f8f9fa;
+      color: #2c3e50;
+    }
+
+    .navbar {
+      background-color: #2c3e50;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo-link {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: #ecf0f1;
+      font-weight: 700;
+      font-size: 1.25rem;
+    }
+
+    .logo-img {
+      height: 50px;
+      margin-right: 10px;
+    }
+
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-menu a {
+      color: #ecf0f1;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .nav-menu a:hover {
+      color: #f39c12;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #2c3e50, #34495e);
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .grid {
+      max-width: 1200px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      display: block;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .card-body a {
+      display: inline-block;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #2c3e50;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .card-body a:hover {
+      color: #A0522D;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #2c3e50;
+      color: white;
+      margin-top: 4rem;
+    }
+  </style>
 </head>
 <body>
 
-<nav class="navbar">
-  <div class="nav-container">
+  <!-- Navigation -->
+  <nav class="navbar">
     <a href="index.html" class="logo-link">
-      <img src="photos/logo.png" alt="MrfixitallOC Logo" class="logo-img">
-      <span>MrfixitallOC</span>
+      <img src="photos/logo.png" alt="Logo" class="logo-img" />
+      MrfixitallOC
     </a>
-
-    <div class="hamburger" onclick="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-
-    <ul class="nav-menu" id="navMenu">
+    <ul class="nav-menu">
       <li><a href="index.html">Home</a></li>
       <li><a href="work.html">Recent Work</a></li>
       <li><a href="faq.html">Q&A</a></li>
       <li><a href="testimonials.html">Testimonials</a></li>
     </ul>
-  </div>
-</nav>
+  </nav>
 
-<div class="hero">
-  <div class="hero-content">
-    <div class="hero-logo">
-      <img src="photos/logo.png" alt="MrfixitallOC Logo">
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Recent Work Categories</h1>
+    <p>Click any category to view the full gallery.</p>
+  </section>
+
+  <!-- Category Grid -->
+  <section class="grid">
+    <!-- Painting -->
+    <div class="card">
+      <img src="photos/Painting1.jpg" alt="Painting preview">
+      <img src="photos/Painting2.jpg" alt="Painting preview">
+      <div class="card-body">
+        <a href="gallery-painting.html">Painting</a>
+      </div>
     </div>
-    <h1>Explore Our Recent Work</h1>
-    <p>A small preview of completed projects — click any category to see more.</p>
-  </div>
-</div>
 
-<main>
-  <section class="section">
-    <h2 class="section-title">Project Categories</h2>
-    <div class="services-grid">
+    <!-- Plumbing -->
+    <div class="card">
+      <img src="photos/Angle-stop.jpg" alt="Plumbing preview">
+      <img src="photos/Hosebib1.jpg" alt="Plumbing preview">
+      <div class="card-body">
+        <a href="gallery-plumbing.html">Plumbing</a>
+      </div>
+    </div>
 
-      <a href="gallery-painting.html" class="service-card">
-        <img src="photos/Paint1.jpg" alt="Painting" class="service-icon">
-        <h3>Painting</h3>
-        <p>Interior & exterior projects</p>
-      </a>
+    <!-- Electrical -->
+    <div class="card">
+      <img src="photos/Hood-fixture.jpg" alt="Electrical preview">
+      <img src="photos/Lightfixture1.jpg" alt="Electrical preview">
+      <div class="card-body">
+        <a href="gallery-electrical.html">Electrical</a>
+      </div>
+    </div>
 
-      <a href="gallery-plumbing.html" class="service-card">
-        <img src="photos/Angle-stop.jpg" alt="Plumbing" class="service-icon">
-        <h3>Plumbing</h3>
-        <p>Pipes, fixtures, and valves</p>
-      </a>
+    <!-- Carpentry -->
+    <div class="card">
+      <img src="photos/Drywall.jpg" alt="Carpentry preview">
+      <img src="photos/Saloncarpentry1.jpg" alt="Carpentry preview">
+      <div class="card-body">
+        <a href="gallery-carpentry.html">Carpentry</a>
+      </div>
+    </div>
 
-      <a href="gallery-electrical.html" class="service-card">
-        <img src="photos/Hood-fixture.jpg" alt="Electrical" class="service-icon">
-        <h3>Electrical</h3>
-        <p>Lighting & wiring projects</p>
-      </a>
+    <!-- Repair -->
+    <div class="card">
+      <img src="photos/Appliance1.jpg" alt="Repair preview">
+      <img src="photos/powerwashing1.jpg" alt="Repair preview">
+      <div class="card-body">
+        <a href="gallery-repair.html">Repairs</a>
+      </div>
+    </div>
 
-      <a href="gallery-carpentry.html" class="service-card">
-        <img src="photos/Drywall.jpg" alt="Carpentry" class="service-icon">
-        <h3>Carpentry</h3>
-        <p>Woodwork, stairs & framing</p>
-      </a>
-
-      <a href="gallery-repair.html" class="service-card">
-        <img src="photos/Tile1.jpg" alt="Repair Work" class="service-icon">
-        <h3>Repair</h3>
-        <p>Tile, power washing, appliance fixes</p>
-      </a>
-
-      <a href="gallery-furniture.html" class="service-card">
-        <img src="photos/Furniturebuild1.jpg" alt="Furniture" class="service-icon">
-        <h3>Furniture</h3>
-        <p>Custom-built pieces</p>
-      </a>
-
+    <!-- Furniture -->
+    <div class="card">
+      <img src="photos/Furniturebuild1.jpg" alt="Furniture preview">
+      <img src="photos/Furniturebuild3.jpg" alt="Furniture preview">
+      <div class="card-body">
+        <a href="gallery-furniture.html">Furniture</a>
+      </div>
     </div>
   </section>
-</main>
 
-<footer>
-  <div class="footer-content">
-    <p>&copy; 2025 MrfixitallOC - Professional Home Repairs in Orange County</p>
-    <div class="footer-buttons">
-      <a href="tel:7146616762" class="btn btn-primary">Call Now</a>
-      <a href="mailto:mrfixitalloc@gmail.com" class="btn btn-primary">Email Us</a>
-    </div>
-  </div>
-</footer>
-
-<script>
-  function toggleMenu() {
-    const nav = document.getElementById('navMenu');
-    nav.classList.toggle('active');
-  }
-</script>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 MrfixitallOC - All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
