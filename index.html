@@ -976,13 +976,13 @@
               <span class="cm-value">(714) 661-6762</span>
             </span>
           </a>
-          <a href="mailto:mrfixitalloc@gmail.com" class="contact-method" onclick="trackEmail()">
+          <a href="/cdn-cgi/l/email-protection#deb3acb8b7a6b7aabfb2b2b1bd9eb9b3bfb7b2f0bdb1b3" class="contact-method" onclick="trackEmail()">
             <span class="cm-icon">
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
             </span>
             <span class="cm-info">
               <span class="cm-label">Email Us</span>
-              <span class="cm-value">mrfixitalloc@gmail.com</span>
+              <span class="cm-value"><span class="__cf_email__" data-cfemail="bed3ccd8d7c6d7cadfd2d2d1ddfed9d3dfd7d290ddd1d3">[email&#160;protected]</span></span>
             </span>
           </a>
         </div>
@@ -1042,7 +1042,7 @@
   <p>&copy; 2025 MrfixitallOC — Professional Home Repairs in Orange County, CA</p>
   <p style="margin-top: 0.5rem;">
     <a href="tel:7146616762" onclick="trackCall()">(714) 661-6762</a> &nbsp;·&nbsp;
-    <a href="mailto:mrfixitalloc@gmail.com" onclick="trackEmail()">mrfixitalloc@gmail.com</a>
+    <a href="/cdn-cgi/l/email-protection#066b74606f7e6f72676a6a696546616b676f6a2865696b" onclick="trackEmail()"><span class="__cf_email__" data-cfemail="7b16091d1203120f1a171714183b1c161a121755181416">[email&#160;protected]</span></a>
   </p>
 </footer>
 
@@ -1052,7 +1052,7 @@
   Call Now
 </a>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // Mobile nav toggle
   function toggleMenu() {
     document.getElementById('navMenu').classList.toggle('active');
@@ -1066,46 +1066,43 @@
     if (!isOpen) item.classList.add('open');
   }
 
-  // Form submission handler
-  // ⚠️ TO MAKE FORMS ACTUALLY SEND: replace the setTimeout below with a real
-  // fetch() to a backend, Formspree, Netlify Forms, or EmailJS endpoint.
-  // Example with Formspree: fetch('https://formspree.io/f/YOUR_FORM_ID', {...})
-  function submitForm(e, formId) {
+  // Form submission handler — powered by Formspree
+  async function submitForm(e, formId) {
     e.preventDefault();
     const form = e.target;
     const successId = formId === 'heroForm' ? 'heroSuccess' : 'contactSuccess';
+    const btn = form.querySelector('.form-submit');
 
     // Track conversion in GA4
     trackFormSubmit();
 
-    // Simulate submission (replace with real backend call)
-    const btn = form.querySelector('.form-submit');
-    btn.textContent = 'Sending...';
+    // Show loading state
+    const originalText = btn.innerHTML;
+    btn.innerHTML = 'Sending...';
     btn.disabled = true;
 
-    setTimeout(() => {
-      form.style.display = 'none';
-      document.getElementById(successId).style.display = 'block';
-    }, 800);
+    try {
+      const data = new FormData(form);
+      const response = await fetch('https://formspree.io/f/mbdabzgq', {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        form.style.display = 'none';
+        document.getElementById(successId).style.display = 'block';
+      } else {
+        throw new Error('Server error');
+      }
+    } catch (err) {
+      btn.innerHTML = originalText;
+      btn.disabled = false;
+      alert('Something went wrong. Please call us directly at (714) 661-6762.');
+    }
   }
 
   // Animate stats on scroll
   const statNums = document.querySelectorAll('.stat-num');
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
-      }
-    });
-  }, { threshold: 0.1 });
-
-  statNums.forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(10px)';
-    el.style.transition = 'all 0.5s ease';
-    observer.observe(el);
-  });
-</script>
-</body>
-</html>
+    entries.forEa
