@@ -6,13 +6,13 @@
   <title>MrfixitallOC – Home Repairs & Handyman Services | Orange County, CA</title>
   <meta name="description" content="Professional handyman & home repair services in Orange County. State-certified journeyman carpenter, OSHA-10 certified. Plumbing, electrical, carpentry, tile & more. Call for a free estimate!">
 
-  <!-- Google Analytics 4 — Replace G-XXXXXXXXXX with your real Measurement ID -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <!-- Google Analytics 4 — Replace G-2F136BXQ5N with your real Measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2F136BXQ5N"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
+    gtag('config', 'G-2F136BXQ5N');
 
     // Conversion tracking helpers
     function trackCall() {
@@ -89,6 +89,20 @@
       letter-spacing: 1px;
     }
     .logo-img { height: 46px; width: auto; }
+    .logo-img-wrap {
+      width: 46px;
+      height: 46px;
+      border-radius: 8px;
+      background: var(--rust);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1rem;
+      color: var(--white);
+      flex-shrink: 0;
+      overflow: hidden;
+    }
     .logo-link .logo-sub {
       display: flex;
       flex-direction: column;
@@ -651,7 +665,10 @@
 <nav class="navbar">
   <div class="nav-container">
     <a href="index.html" class="logo-link">
-      <img src="photos/logo.png" alt="MrfixitallOC Logo" class="logo-img">
+      <div class="logo-img-wrap">
+        <img src="photos/logo.png" alt="MrfixitallOC Logo" class="logo-img"
+          onerror="this.style.display='none'; this.parentNode.innerText='MF';">
+      </div>
       <div class="logo-sub">
         <span>MrfixitallOC</span>
         <span>Orange County's Handyman</span>
