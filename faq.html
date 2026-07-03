@@ -5,17 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Handyman FAQ – MrfixitallOC | Orange County Home Repair Questions</title>
   <meta name="description" content="Common questions about handyman services in Orange County. Pricing, certifications, service areas, and emergency repairs answered by MrfixitallOC.">
-  <meta name="keywords" content="handyman FAQ Orange County, home repair questions, MrfixitallOC pricing, handyman services Newport Beach, Huntington Beach handyman">
-  <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.mrfixitalloc.com/faq.html">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Handyman FAQ – MrfixitallOC | Orange County">
-  <meta property="og:description" content="Answers to common questions about home repairs in Orange County, from pricing to service areas.">
-  <meta property="og:url" content="https://www.mrfixitalloc.com/faq.html">
-  <meta property="og:image" content="https://www.mrfixitalloc.com/photos/logo.png">
-  <meta name="twitter:card" content="summary_large_image">
 
-  <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-2F136BXQ5N"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -24,379 +15,116 @@
     gtag('config', 'G-2F136BXQ5N');
     function trackCall() { gtag('event', 'conversion', { event_category: 'Lead', event_label: 'Phone Call Click' }); }
     function trackEmail() { gtag('event', 'conversion', { event_category: 'Lead', event_label: 'Email Click' }); }
-    function trackFaq(question) { gtag('event', 'select_content', { event_category: 'FAQ', event_label: question }); }
+    function trackFaq(q) { gtag('event', 'select_content', { event_category: 'FAQ', event_label: q }); }
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- FAQ Structured Data -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {"@type":"Question","name":"What areas do you serve in Orange County?","acceptedAnswer":{"@type":"Answer","text":"I serve all of Orange County including Huntington Beach, Newport Beach, Costa Mesa, Irvine, Anaheim, Santa Ana, Laguna Beach, and surrounding cities."}},
-      {"@type":"Question","name":"Do you offer free estimates?","acceptedAnswer":{"@type":"Answer","text":"Yes — estimates are always free and honest with no hidden fees or surprise charges."}},
-      {"@type":"Question","name":"How much does a handyman cost in Orange County?","acceptedAnswer":{"@type":"Answer","text":"Pricing depends on the job type and complexity. Most repairs are quoted as flat rates for defined scopes. Contact us for a free estimate tailored to your project."}},
-      {"@type":"Question","name":"Are you licensed and certified?","acceptedAnswer":{"@type":"Answer","text":"Yes. I am a state-certified journeyman carpenter and OSHA-10 certified with years of hands-on experience across all skilled trades."}},
-      {"@type":"Question","name":"Do you offer same-day or emergency repairs?","acceptedAnswer":{"@type":"Answer","text":"In most cases yes. Call directly at (714) 661-6762 for urgent repairs and I'll let you know the soonest I can arrive."}},
-      {"@type":"Question","name":"What types of repairs do you handle?","acceptedAnswer":{"@type":"Answer","text":"Electrical, plumbing, carpentry, tile work, painting, cabinetry, irrigation, furniture assembly, drywall, and general home maintenance."}},
-      {"@type":"Question","name":"Do you handle both small and large jobs?","acceptedAnswer":{"@type":"Answer","text":"Yes — from a single leaky faucet to a full room renovation. No job is too small or too complex."}},
-      {"@type":"Question","name":"How do I schedule an appointment?","acceptedAnswer":{"@type":"Answer","text":"Call or text (714) 661-6762, email mrfixitalloc@gmail.com, or fill out the contact form on our website."}}
-    ]
-  }
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"What areas do you serve in Orange County?","acceptedAnswer":{"@type":"Answer","text":"I serve all of Orange County including Huntington Beach, Newport Beach, Costa Mesa, Irvine, Anaheim, Santa Ana, Laguna Beach, and surrounding cities."}},
+    {"@type":"Question","name":"Do you offer free estimates?","acceptedAnswer":{"@type":"Answer","text":"Yes — estimates are always free and honest with no hidden fees or surprise charges."}},
+    {"@type":"Question","name":"How much does a handyman cost in Orange County?","acceptedAnswer":{"@type":"Answer","text":"Pricing depends on the job type and complexity. Most repairs are quoted as flat rates. Contact us for a free estimate."}},
+    {"@type":"Question","name":"Are you licensed and certified?","acceptedAnswer":{"@type":"Answer","text":"Yes. I am a state-certified journeyman carpenter and OSHA-10 certified."}},
+    {"@type":"Question","name":"Do you offer same-day or emergency repairs?","acceptedAnswer":{"@type":"Answer","text":"In most cases yes. Call directly at (714) 661-6762 for urgent repairs."}}
+  ]}
   </script>
 
   <style>
     :root {
-      --rust: #B5531A;
-      --rust-dark: #8B3E12;
-      --rust-light: #E8784A;
-      --navy: #1A2535;
-      --navy-mid: #243347;
-      --navy-light: #2E4060;
-      --cream: #FAF7F2;
-      --text: #1A2535;
-      --text-muted: #6B7A8D;
-      --white: #ffffff;
-      --border: #E2E8F0;
-      --shadow: 0 4px 24px rgba(26,37,53,0.10);
+      --rust: #B5531A; --rust-dark: #8B3E12; --rust-light: #E8784A;
+      --navy: #1A2535; --navy-mid: #243347; --navy-light: #2E4060;
+      --cream: #FAF7F2; --text: #1A2535; --text-muted: #6B7A8D;
+      --white: #ffffff; --border: #E2E8F0;
     }
-
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--cream);
-      color: var(--text);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
+    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text); line-height: 1.6; overflow-x: hidden; }
 
-    /* ── NAVBAR ── */
-    .navbar {
-      background: var(--navy);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      border-bottom: 2px solid var(--rust);
-    }
-    .nav-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.85rem 2rem;
-    }
-    .logo-link {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      text-decoration: none;
-      color: var(--white);
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.6rem;
-      letter-spacing: 1px;
-    }
-    .logo-img-wrap {
-      width: 46px; height: 46px;
-      border-radius: 8px;
-      background: var(--rust);
-      display: flex; align-items: center; justify-content: center;
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.1rem;
-      color: var(--white);
-      flex-shrink: 0;
-      overflow: hidden;
-    }
+    .navbar { background: var(--navy); position: sticky; top: 0; z-index: 1000; border-bottom: 2px solid var(--rust); }
+    .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0.85rem 2rem; }
+    .logo-link { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: var(--white); font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; letter-spacing: 1px; }
+    .logo-img-wrap { width: 46px; height: 46px; border-radius: 8px; background: var(--rust); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; color: var(--white); flex-shrink: 0; overflow: hidden; }
     .logo-img { height: 46px; width: auto; display: block; }
     .logo-sub { display: flex; flex-direction: column; line-height: 1; }
-    .logo-sub span:last-child {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.6rem;
-      font-weight: 500;
-      letter-spacing: 2px;
-      color: var(--rust-light);
-      text-transform: uppercase;
-    }
+    .logo-sub span:last-child { font-family: 'DM Sans', sans-serif; font-size: 0.6rem; font-weight: 500; letter-spacing: 2px; color: var(--rust-light); text-transform: uppercase; }
     .nav-menu { display: flex; gap: 0.25rem; list-style: none; align-items: center; }
-    .nav-menu a {
-      color: #CBD5E1;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 0.9rem;
-      padding: 0.5rem 0.9rem;
-      border-radius: 6px;
-      transition: all 0.2s;
-    }
+    .nav-menu a { color: #CBD5E1; text-decoration: none; font-weight: 500; font-size: 0.9rem; padding: 0.5rem 0.9rem; border-radius: 6px; transition: all 0.2s; }
     .nav-menu a:hover, .nav-menu a.active { color: var(--white); background: var(--navy-light); }
-    .nav-cta {
-      background: var(--rust) !important;
-      color: var(--white) !important;
-      padding: 0.5rem 1.2rem !important;
-      border-radius: 6px !important;
-      font-weight: 600 !important;
-    }
-    .nav-cta:hover { background: var(--rust-dark) !important; }
-    .hamburger { display: none; }
-    
+    .nav-cta { background: var(--rust) !important; color: var(--white) !important; padding: 0.5rem 1.2rem !important; border-radius: 6px !important; font-weight: 600 !important; }
 
-    /* ── PAGE HEADER ── */
-    .page-header {
-      background: var(--navy);
-      color: var(--white);
-      padding: 4rem 2rem 3rem;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    .page-header::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    }
+    .page-header { background: var(--navy); color: var(--white); padding: 4rem 2rem 3rem; text-align: center; position: relative; overflow: hidden; }
+    .page-header::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
     .page-header-inner { position: relative; }
-    .page-eyebrow {
-      display: inline-block;
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      color: var(--rust-light);
-      margin-bottom: 0.75rem;
-    }
-    .page-header h1 {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(2.5rem, 5vw, 4rem);
-      letter-spacing: 1px;
-      margin-bottom: 0.75rem;
-    }
+    .page-eyebrow { display: inline-block; font-size: 0.75rem; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--rust-light); margin-bottom: 0.75rem; }
+    .page-header h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.5rem, 5vw, 4rem); letter-spacing: 1px; margin-bottom: 0.75rem; }
     .page-header p { font-size: 1.05rem; color: #94A3B8; max-width: 500px; margin: 0 auto; }
 
-    /* ── MAIN ── */
     main { max-width: 860px; margin: 0 auto; padding: 4rem 2rem; }
 
-    /* ── CATEGORY SECTIONS ── */
     .faq-category { margin-bottom: 3rem; }
-    .category-label {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      color: var(--rust);
-      margin-bottom: 1rem;
-    }
-    .category-label::after {
-      content: '';
-      flex: 1;
-      height: 1.5px;
-      background: var(--border);
-    }
+    .category-label { display: flex; align-items: center; gap: 0.75rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--rust); margin-bottom: 1rem; }
+    .category-label::after { content: ''; flex: 1; height: 1.5px; background: var(--border); }
 
-    /* ── FAQ ACCORDION ── */
     .faq-list { display: flex; flex-direction: column; gap: 0.75rem; }
-    .faq-item {
-      background: var(--white);
-      border: 1.5px solid var(--border);
-      border-radius: 10px;
-      overflow: hidden;
-      transition: border-color 0.2s;
-    }
+    .faq-item { background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; overflow: hidden; transition: border-color 0.2s; }
     .faq-item.open { border-color: var(--rust); }
-    .faq-q {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.25rem 1.5rem;
-      background: none;
-      border: none;
-      cursor: pointer;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--navy);
-      text-align: left;
-      gap: 1rem;
-      transition: color 0.2s;
-    }
+    .faq-q { width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 1.5rem; background: none; border: none; cursor: pointer; font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 600; color: var(--navy); text-align: left; gap: 1rem; transition: color 0.2s; }
     .faq-q:hover { color: var(--rust); }
     .faq-item.open .faq-q { color: var(--rust); }
-    .faq-chevron {
-      width: 20px; height: 20px;
-      flex-shrink: 0;
-      color: var(--text-muted);
-      transition: transform 0.3s;
-    }
+    .faq-chevron { width: 20px; height: 20px; flex-shrink: 0; color: var(--text-muted); transition: transform 0.3s; }
     .faq-item.open .faq-chevron { transform: rotate(180deg); color: var(--rust); }
-    .faq-a {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.35s ease, padding 0.2s;
-      padding: 0 1.5rem;
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      line-height: 1.8;
-    }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.2s; padding: 0 1.5rem; font-size: 0.95rem; color: var(--text-muted); line-height: 1.8; }
     .faq-item.open .faq-a { max-height: 400px; padding: 0 1.5rem 1.25rem; }
 
-    /* ── STILL HAVE QUESTIONS ── */
-    .still-questions {
-      background: var(--navy);
-      border-radius: 20px;
-      padding: 3rem;
-      text-align: center;
-      color: var(--white);
-      margin-top: 3rem;
-    }
-    .still-questions h2 {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 2.5rem;
-      letter-spacing: 0.5px;
-      margin-bottom: 0.75rem;
-    }
+    .still-questions { background: var(--navy); border-radius: 20px; padding: 3rem; text-align: center; color: var(--white); margin-top: 3rem; }
+    .still-questions h2 { font-family: 'Bebas Neue', sans-serif; font-size: 2.5rem; letter-spacing: 0.5px; margin-bottom: 0.75rem; }
     .still-questions h2 em { color: var(--rust-light); font-style: normal; }
-    .still-questions p { color: #94A3B8; margin-bottom: 2rem; font-size: 1rem; }
+    .still-questions p { color: #94A3B8; margin-bottom: 2rem; }
     .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
-    /* ── BUTTONS ── */
-    .btn {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      padding: 0.875rem 1.75rem;
-      border-radius: 8px; font-weight: 700; font-size: 0.95rem;
-      cursor: pointer; border: none; text-decoration: none;
-      transition: all 0.2s; font-family: 'DM Sans', sans-serif;
-    }
+    .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.875rem 1.75rem; border-radius: 8px; font-weight: 700; font-size: 0.95rem; cursor: pointer; border: none; text-decoration: none; transition: all 0.2s; font-family: 'DM Sans', sans-serif; }
     .btn svg { width: 18px; height: 18px; }
     .btn-primary { background: var(--rust); color: var(--white); }
-    .btn-primary:hover { background: var(--rust-dark); transform: translateY(-2px); box-shadow: 0 6px 16px rgba(181,83,26,0.35); }
+    .btn-primary:hover { background: var(--rust-dark); transform: translateY(-2px); }
     .btn-outline { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.35); }
     .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.1); }
 
-    /* ── FOOTER ── */
-    footer {
-      background: var(--navy);
-      color: #94A3B8;
-      padding: 2rem;
-      text-align: center;
-      border-top: 2px solid var(--rust);
-      font-size: 0.88rem;
-      margin-top: 4rem;
-    }
+    footer { background: var(--navy); color: #94A3B8; padding: 2rem; text-align: center; border-top: 2px solid var(--rust); font-size: 0.88rem; margin-top: 4rem; }
     footer a { color: var(--rust-light); text-decoration: none; }
-    footer a:hover { text-decoration: underline; }
 
-    /* ── FLOATING CALL ── */
-    .floating-call {
-      display: none;
-      position: fixed;
-      bottom: 1.5rem; right: 1.5rem;
-      background: var(--rust);
-      color: var(--white);
-      border-radius: 100px;
-      padding: 0.9rem 1.5rem;
-      font-weight: 700;
-      font-size: 0.95rem;
-      text-decoration: none;
-      box-shadow: 0 6px 20px rgba(181,83,26,0.45);
-      z-index: 999;
-      align-items: center;
-      gap: 0.5rem;
-      transition: all 0.2s;
-    }
-    .floating-call svg { width: 18px; height: 18px; }
-    .floating-call:hover { background: var(--rust-dark); transform: scale(1.05); }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 640px) {
-      .hamburger { display: none; }
-      .nav-container { padding: 0.75rem 1rem; }
-      .nav-menu {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        flex-wrap: nowrap;
-        gap: 0.15rem;
-        scrollbar-width: none;
-      }
-      .nav-menu::-webkit-scrollbar { display: none; }
-      .nav-menu a { white-space: nowrap; font-size: 0.78rem; padding: 0.4rem 0.6rem; }
-      .nav-cta { padding: 0.4rem 0.8rem !important; font-size: 0.78rem !important; }
-      .logo-sub span:last-child { display: none; }
-      .floating-call { display: flex; }
-      .still-questions { padding: 2rem 1.5rem; }
-    }
-
-    /* ── BOTTOM TAB BAR (mobile only) ── */
-    .bottom-nav {
-      display: none;
-      position: fixed;
-      bottom: 0; left: 0; right: 0;
-      background: var(--navy);
-      border-top: 2px solid var(--rust);
-      z-index: 1000;
-      padding: 0.5rem 0 calc(0.5rem + env(safe-area-inset-bottom));
-    }
-    .bottom-nav-inner {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-    }
-    .bottom-tab {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.2rem;
-      text-decoration: none;
-      color: #94A3B8;
-      font-size: 0.65rem;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      padding: 0.3rem 0.5rem;
-      border-radius: 8px;
-      transition: color 0.2s;
-      min-width: 55px;
-      text-align: center;
-    }
+    /* BOTTOM TAB BAR */
+    .bottom-nav { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: var(--navy); border-top: 2px solid var(--rust); z-index: 1000; padding: 0.4rem 0 calc(0.4rem + env(safe-area-inset-bottom)); }
+    .bottom-nav-inner { display: flex; justify-content: space-around; align-items: center; max-width: 500px; margin: 0 auto; }
+    .bottom-tab { display: flex; flex-direction: column; align-items: center; gap: 0.2rem; text-decoration: none; color: #94A3B8; font-size: 0.62rem; font-weight: 600; padding: 0.3rem 0.5rem; border-radius: 8px; transition: color 0.2s; min-width: 52px; text-align: center; }
     .bottom-tab svg { width: 22px; height: 22px; }
     .bottom-tab.active { color: var(--rust-light); }
     .bottom-tab:hover { color: var(--white); }
-    .bottom-tab.tab-call {
-      background: var(--rust);
-      color: var(--white) !important;
-      border-radius: 100px;
-      padding: 0.5rem 0.75rem;
-    }
+    .bottom-tab.tab-call { background: var(--rust); color: var(--white); border-radius: 12px; padding: 0.4rem 0.75rem; }
+    .bottom-tab.tab-call:hover { background: var(--rust-dark); color: var(--white); }
+
     @media (max-width: 768px) {
       .bottom-nav { display: block; }
-      body { padding-bottom: 75px; }
-      .floating-call { display: none !important; }
+      body { padding-bottom: 72px; }
+      .nav-menu .nav-cta { display: none; }
+      .still-questions { padding: 2rem 1.5rem; }
+    }
+    @media (max-width: 640px) {
+      .logo-sub span:last-child { display: none; }
     }
   </style>
 </head>
 <body>
 
-<!-- ── NAVBAR ── -->
 <nav class="navbar">
   <div class="nav-container">
     <a href="index.html" class="logo-link">
-      <div class="logo-img-wrap">
-        <img src="photos/logo.png" alt="MrfixitallOC Logo" class="logo-img"
-          onerror="this.style.display='none'; this.parentNode.innerText='MF';">
-      </div>
-      <div class="logo-sub">
-        <span>MrfixitallOC</span>
-        <span>Orange County's Handyman</span>
-      </div>
+      <div class="logo-img-wrap"><img src="photos/logo.png" alt="MrfixitallOC Logo" class="logo-img" onerror="this.style.display='none'; this.parentNode.innerText='MF';"></div>
+      <div class="logo-sub"><span>MrfixitallOC</span><span>Orange County's Handyman</span></div>
     </a>
-
-    <ul class="nav-menu" id="navMenu">
+    <ul class="nav-menu">
       <li><a href="index.html">Home</a></li>
       <li><a href="work.html">Recent Work</a></li>
       <li><a href="faq.html" class="active">Q&A</a></li>
@@ -406,7 +134,6 @@
   </div>
 </nav>
 
-<!-- ── PAGE HEADER ── -->
 <div class="page-header">
   <div class="page-header-inner">
     <span class="page-eyebrow">Got Questions?</span>
@@ -415,146 +142,44 @@
   </div>
 </div>
 
-<!-- ── MAIN ── -->
 <main>
-
-  <!-- PRICING -->
   <div class="faq-category">
     <div class="category-label">💰 Pricing & Estimates</div>
     <div class="faq-list">
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this, 'Free estimates')">
-          Do you offer free estimates?
-          <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg>
-        </button>
-        <div class="faq-a">Yes — estimates are always free and honest with no hidden fees or surprise charges. I'll assess your project, give you a clear price upfront, and you decide if you'd like to move forward. No pressure.</div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this, 'Handyman cost')">
-          How much does a handyman cost in Orange County?
-          <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg>
-        </button>
-        <div class="faq-a">Pricing depends on the job type and complexity. Most repairs are quoted as flat rates for defined scopes so you know exactly what you're paying before I start. Call or fill out the form for a free estimate tailored to your specific project.</div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this, 'Payment methods')">
-          What payment methods do you accept?
-          <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg>
-        </button>
-        <div class="faq-a">I accept cash, check, Venmo, Zelle, and most major payment apps. Payment is typically due upon completion of the job unless other arrangements are made in advance.</div>
-      </div>
-
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this,'Free estimates')">Do you offer free estimates?<svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg></button><div class="faq-a">Yes — estimates are always free and honest with no hidden fees or surprise charges. I'll assess your project, give you a clear price upfront, and you decide if you'd like to move forward. No pressure.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this,'Cost')">How much does a handyman cost in Orange County?<svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg></button><div class="faq-a">Pricing depends on the job type and complexity. Most repairs are quoted as flat rates for defined scopes so you know exactly what you're paying before I start. Call or fill out the form for a free estimate tailored to your specific project.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this,'Payment')">What payment methods do you accept?<svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg></button><div class="faq-a">I accept cash, check, Venmo, Zelle, and most major payment apps. Payment is typically due upon completion of the job unless other arrangements are made in advance.</div></div>
     </div>
   </div>
 
-  <!-- SERVICES -->
   <div class="faq-category">
     <div class="category-label">🔧 Services</div>
     <div class="faq-list">
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this, 'Types of repairs')">
-          What types of repairs do you handle?
-          <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg>
-        </button>
-        <div class="faq-a">Electrical, plumbing, carpentry, tile work, painting, cabinetry, irrigation, furniture assembly, drywall, concrete patching, power washing, and general home maintenance. If it needs fixing, there's a good chance I can handle it — just ask.</div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this, 'Small and large jobs')">
-          Do you handle both small and large jobs?
-          <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg>
-        </button>
-        <div class="faq-a">Absolutely. From a single leaky faucet to a full room renovation — no job is too small or too large. I treat every project with the same level of attention and care regardless of size.</div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this, 'Emergency repairs')">
-          Do you offer same-day or emergency repairs?
-          <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg>
-        </button>
-        <div class="faq-a">In most cases yes. If it's urgent, call me directly at (714) 661-6762 and I'll let you know the soonest I can arrive. I do my best to accommodate emergency situations as quickly as possible.</div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this, 'Materials')">
-          Do you supply materials or do I need to buy them?
-          <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg>
-        </button>
-        <div class="faq-a">Either works. I can source and supply materials for your project and include them in the estimate, or you can purchase materials yourself if you have a preference. We'll discuss what works best during the estimate.</div>
-      </div>
-
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this,'Repairs')">What types of repairs do you handle?<svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg></button><div class="faq-a">Electrical, plumbing, carpentry, tile work, painting, cabinetry, irrigation, furniture assembly, drywall, concrete patching, power washing, and general home maintenance. If it needs fixing, there's a good chance I can handle it — just ask.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this,'Job size')">Do you handle both small and large jobs?<svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg></button><div class="faq-a">Absolutely. From a single leaky faucet to a full room renovation — no job is too small or too large. I treat every project with the same level of attention and care regardless of size.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this,'Emergency')">Do you offer same-day or emergency repairs?<svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg></button><div class="faq-a">In most cases yes. If it's urgent, call me directly at (714) 661-6762 and I'll let you know the soonest I can arrive. I do my best to accommodate emergency situations as quickly as possible.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this,'Materials')">Do you supply materials or do I need to buy them?<svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg></button><div class="faq-a">Either works. I can source and supply materials for your project and include them in the estimate, or you can purchase materials yourself if you have a preference. We'll discuss what works best during the estimate.</div></div>
     </div>
   </div>
 
-  <!-- CREDENTIALS -->
   <div class="faq-category">
     <div class="category-label">🏆 Credentials & Trust</div>
     <div class="faq-list">
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this, 'Licensed and certified')">
-          Are you licensed and certified?
-          <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg>
-        </button>
-        <div class="faq-a">Yes. I'm a state-certified journeyman carpenter and OSHA-10 certified, with years of hands-on experience across all skilled trades. You can hire with full confidence that the work is being done by a trained professional.</div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this, 'How long in business')">
-          How long have you been in business?
-          <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg>
-        </button>
-        <div class="faq-a">MrfixitallOC has been serving Orange County homeowners for over two years, with more than 500 completed projects. I've built my reputation on word-of-mouth referrals and repeat customers — which is the best measure of quality there is.</div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this, 'Satisfaction guarantee')">
-          What if I'm not satisfied with the work?
-          <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg>
-        </button>
-        <div class="faq-a">Your satisfaction is my priority. If something isn't right, I'll come back and make it right — plain and simple. I stand behind every job I complete and won't consider a project finished until you're happy with the results.</div>
-      </div>
-
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this,'Licensed')">Are you licensed and certified?<svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg></button><div class="faq-a">Yes. I'm a state-certified journeyman carpenter and OSHA-10 certified, with years of hands-on experience across all skilled trades. You can hire with full confidence that the work is being done by a trained professional.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this,'Experience')">How long have you been in business?<svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg></button><div class="faq-a">MrfixitallOC has been serving Orange County homeowners for over two years, with more than 500 completed projects. I've built my reputation on word-of-mouth referrals and repeat customers.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this,'Satisfaction')">What if I'm not satisfied with the work?<svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg></button><div class="faq-a">Your satisfaction is my priority. If something isn't right, I'll come back and make it right — plain and simple. I stand behind every job I complete and won't consider a project finished until you're happy with the results.</div></div>
     </div>
   </div>
 
-  <!-- SCHEDULING -->
   <div class="faq-category">
     <div class="category-label">📅 Scheduling & Service Area</div>
     <div class="faq-list">
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this, 'Service areas')">
-          What areas do you serve in Orange County?
-          <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg>
-        </button>
-        <div class="faq-a">I serve all of Orange County including Huntington Beach, Newport Beach, Costa Mesa, Irvine, Anaheim, Santa Ana, Laguna Beach, Fullerton, Tustin, and surrounding cities. Not sure if I cover your area? Just give me a call — chances are I do.</div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this, 'Schedule appointment')">
-          How do I schedule an appointment?
-          <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg>
-        </button>
-        <div class="faq-a">Three easy ways — call or text (714) 661-6762, email mrfixitalloc@gmail.com, or fill out the contact form on our homepage. I typically respond within a few hours and can usually get to you within 1-2 days for non-urgent work.</div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this, 'Hours of operation')">
-          What are your hours?
-          <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg>
-        </button>
-        <div class="faq-a">I typically work Monday through Saturday, 8am to 6pm. For urgent or emergency repairs outside of those hours, call me directly and I'll do my best to help.</div>
-      </div>
-
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this,'Areas')">What areas do you serve in Orange County?<svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg></button><div class="faq-a">I serve all of Orange County including Huntington Beach, Newport Beach, Costa Mesa, Irvine, Anaheim, Santa Ana, Laguna Beach, Fullerton, Tustin, and surrounding cities. Not sure if I cover your area? Just give me a call — chances are I do.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this,'Schedule')">How do I schedule an appointment?<svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg></button><div class="faq-a">Three easy ways — call or text (714) 661-6762, email mrfixitalloc@gmail.com, or fill out the contact form on our homepage. I typically respond within a few hours and can usually get to you within 1-2 days for non-urgent work.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this,'Hours')">What are your hours?<svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg></button><div class="faq-a">I typically work Monday through Saturday, 8am to 6pm. For urgent or emergency repairs outside of those hours, call me directly and I'll do my best to help.</div></div>
     </div>
   </div>
 
-  <!-- STILL HAVE QUESTIONS CTA -->
   <div class="still-questions">
     <h2>Still Have <em>Questions?</em></h2>
     <p>Just reach out — I'm happy to talk through your project before you commit to anything.</p>
@@ -563,45 +188,34 @@
         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
         Call (714) 661-6762
       </a>
-      <a href="index.html#contact" class="btn btn-outline">
-        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-        Send a Message
-      </a>
+      <a href="index.html#contact" class="btn btn-outline">Send a Message</a>
     </div>
   </div>
-
 </main>
 
-<!-- ── FOOTER ── -->
 <footer>
   <p>&copy; 2026 MrfixitallOC — Professional Home Repairs in Orange County, CA</p>
-  <p style="margin-top: 0.5rem;">
-    <a href="tel:7146616762" onclick="trackCall()">(714) 661-6762</a> &nbsp;·&nbsp;
-    <a href="mailto:mrfixitalloc@gmail.com" onclick="trackEmail()">mrfixitalloc@gmail.com</a>
-  </p>
+  <p style="margin-top: 0.5rem;"><a href="tel:7146616762" onclick="trackCall()">(714) 661-6762</a> &nbsp;·&nbsp; <a href="mailto:mrfixitalloc@gmail.com" onclick="trackEmail()">mrfixitalloc@gmail.com</a></p>
 </footer>
 
-<!-- ── FLOATING CALL ── -->
-<a href="tel:7146616762" class="floating-call" onclick="trackCall()">
-  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-  Call Now
-</a>
+<!-- BOTTOM TAB BAR -->
+<nav class="bottom-nav">
+  <div class="bottom-nav-inner">
+    <a href="index.html" class="bottom-tab"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>Home</a>
+    <a href="work.html" class="bottom-tab"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>Work</a>
+    <a href="tel:7146616762" class="bottom-tab tab-call" onclick="trackCall()"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>Call</a>
+    <a href="faq.html" class="bottom-tab active"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Q&A</a>
+    <a href="testimonials.html" class="bottom-tab"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>Reviews</a>
+  </div>
+</nav>
 
 <script>
-  function toggleMenu() {
-    document.getElementById('navMenu').classList.toggle('active');
-  }
-
   function toggleFaq(btn, label) {
     const item = btn.closest('.faq-item');
     const isOpen = item.classList.contains('open');
     document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-    if (!isOpen) {
-      item.classList.add('open');
-      trackFaq(label);
-    }
+    if (!isOpen) { item.classList.add('open'); trackFaq(label); }
   }
 </script>
-
 </body>
 </html>
