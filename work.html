@@ -3,20 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Recent Work - MrfixitallOC | Home Repair Galleries in Orange County</title>
-  <meta name="description" content="Browse recent home repair galleries in Orange County by MrfixitallOC. Painting, plumbing, electrical, carpentry, repairs, and furniture projects."/>
-  <meta name="keywords" content="handyman portfolio Orange County, home repair work, carpentry projects, MrfixitallOC galleries"/>
-  <meta name="robots" content="index, follow"/>
-  <link rel="canonical" href="https://www.mrfixitalloc.com/work.html"/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:title" content="Recent Work - MrfixitallOC"/>
-  <meta property="og:description" content="Real home repair projects completed in Orange County by a state-certified journeyman carpenter."/>
-  <meta property="og:url" content="https://www.mrfixitalloc.com/work.html"/>
-  <meta property="og:image" content="https://www.mrfixitalloc.com/photos/logo.png"/>
-  <meta name="twitter:card" content="summary_large_image"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <title>Recent Work – MrfixitallOC | Orange County Handyman Portfolio</title>
+  <meta name="description" content="See real work completed by MrfixitallOC across Orange County. Plumbing, electrical, carpentry, tile, painting, furniture builds and more.">
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2F136BXQ5N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2F136BXQ5N');
+    function trackCall() { gtag('event', 'conversion', { event_category: 'Lead', event_label: 'Phone Call Click' }); }
+    function trackEmail() { gtag('event', 'conversion', { event_category: 'Lead', event_label: 'Email Click' }); }
+    function trackPhoto(name) { gtag('event', 'view_item', { event_category: 'Portfolio', event_label: name }); }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
     :root {
       --rust: #B5531A;
@@ -44,7 +49,7 @@
       overflow-x: hidden;
     }
 
-    /* \u2500\u2500 NAVBAR \u2500\u2500 */
+    /* ── NAVBAR ── */
     .navbar {
       background: var(--navy);
       position: sticky;
@@ -113,7 +118,7 @@
     .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 0.5rem; }
     .hamburger span { width: 24px; height: 2px; background: var(--white); border-radius: 2px; transition: all 0.3s; }
 
-    /* \u2500\u2500 PAGE HEADER \u2500\u2500 */
+    /* ── PAGE HEADER ── */
     .page-header {
       background: var(--navy);
       color: var(--white);
@@ -146,7 +151,7 @@
     }
     .page-header p { font-size: 1.05rem; color: #94A3B8; max-width: 500px; margin: 0 auto; }
 
-    /* \u2500\u2500 STATS BAR \u2500\u2500 */
+    /* ── STATS BAR ── */
     .stats-bar { background: var(--rust); color: var(--white); }
     .stats-inner {
       max-width: 1200px;
@@ -168,10 +173,10 @@
     }
     .stat-label { font-size: 0.78rem; opacity: 0.85; font-weight: 500; }
 
-    /* \u2500\u2500 MAIN \u2500\u2500 */
+    /* ── MAIN ── */
     main { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; }
 
-    /* \u2500\u2500 FILTER TABS \u2500\u2500 */
+    /* ── FILTER TABS ── */
     .filter-wrap {
       display: flex;
       gap: 0.5rem;
@@ -206,7 +211,7 @@
       color: var(--white);
     }
 
-    /* \u2500\u2500 GALLERY GRID \u2500\u2500 */
+    /* ── GALLERY GRID ── */
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -298,7 +303,7 @@
     }
     .img-placeholder svg { width: 32px; height: 32px; opacity: 0.4; }
 
-    /* \u2500\u2500 LIGHTBOX \u2500\u2500 */
+    /* ── LIGHTBOX ── */
     .lightbox {
       display: none;
       position: fixed;
@@ -347,7 +352,7 @@
     }
     .lightbox-caption strong { color: var(--white); }
 
-    /* \u2500\u2500 CTA \u2500\u2500 */
+    /* ── CTA ── */
     .cta-section {
       background: var(--navy);
       border-radius: 20px;
@@ -366,7 +371,7 @@
     .cta-section p { color: #94A3B8; margin-bottom: 2rem; }
     .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
-    /* \u2500\u2500 BUTTONS \u2500\u2500 */
+    /* ── BUTTONS ── */
     .btn {
       display: inline-flex; align-items: center; gap: 0.5rem;
       padding: 0.875rem 1.75rem;
@@ -380,7 +385,7 @@
     .btn-outline { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.35); }
     .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.1); }
 
-    /* \u2500\u2500 FOOTER \u2500\u2500 */
+    /* ── FOOTER ── */
     footer {
       background: var(--navy);
       color: #94A3B8;
@@ -393,7 +398,7 @@
     footer a { color: var(--rust-light); text-decoration: none; }
     footer a:hover { text-decoration: underline; }
 
-    /* \u2500\u2500 FLOATING CALL \u2500\u2500 */
+    /* ── FLOATING CALL ── */
     .floating-call {
       display: none;
       position: fixed;
@@ -414,7 +419,7 @@
     .floating-call svg { width: 18px; height: 18px; }
     .floating-call:hover { background: var(--rust-dark); transform: scale(1.05); }
 
-    /* \u2500\u2500 RESPONSIVE \u2500\u2500 */
+    /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
       .stats-inner { grid-template-columns: repeat(2, 1fr); }
       .stat-item:nth-child(2) { border-right: none; }
@@ -439,7 +444,7 @@
 </head>
 <body>
 
-<!-- \u2500\u2500 NAVBAR \u2500\u2500 -->
+<!-- ── NAVBAR ── -->
 <nav class="navbar">
   <div class="nav-container">
     <a href="index.html" class="logo-link">
@@ -460,21 +465,21 @@
       <li><a href="work.html" class="active">Recent Work</a></li>
       <li><a href="faq.html">Q&A</a></li>
       <li><a href="testimonials.html">Testimonials</a></li>
-      <li><a href="tel:7146616762" class="nav-cta" onclick="trackCall()">\ud83d\udcde Call Now</a></li>
+      <li><a href="tel:7146616762" class="nav-cta" onclick="trackCall()">📞 Call Now</a></li>
     </ul>
   </div>
 </nav>
 
-<!-- \u2500\u2500 PAGE HEADER \u2500\u2500 -->
+<!-- ── PAGE HEADER ── -->
 <div class="page-header">
   <div class="page-header-inner">
     <span class="page-eyebrow">The Proof Is In The Work</span>
     <h1>Recent Work</h1>
-    <p>Real jobs completed across Orange County \u2014 from quick fixes to full projects.</p>
+    <p>Real jobs completed across Orange County — from quick fixes to full projects.</p>
   </div>
 </div>
 
-<!-- \u2500\u2500 STATS BAR \u2500\u2500 -->
+<!-- ── STATS BAR ── -->
 <div class="stats-bar">
   <div class="stats-inner">
     <div class="stat-item">
@@ -490,13 +495,13 @@
       <span class="stat-label">Total Jobs Done</span>
     </div>
     <div class="stat-item">
-      <span class="stat-num">5\u2605</span>
+      <span class="stat-num">5★</span>
       <span class="stat-label">Rated by Clients</span>
     </div>
   </div>
 </div>
 
-<!-- \u2500\u2500 MAIN \u2500\u2500 -->
+<!-- ── MAIN ── -->
 <main>
 
   <!-- Filter Tabs -->
@@ -599,14 +604,15 @@
       </div>
     </div>
 
-  <!-- Category Grid -->
-  <section class="grid">
-    <!-- Painting -->
-    <div class="card">
-      <img src="photos/Painting1.jpg" alt="Painting preview">
-      <img src="photos/Paint.jpg" alt="Painting preview">
-      <div class="card-body">
-        <a href="gallery-painting.html">Painting</a>
+    <div class="gallery-item" data-category="furniture" onclick="openLightbox('photos/Furniturebuild3.jpg', 'Furniture Assembly', 'Furniture')">
+      <div class="gallery-img-wrap">
+        <img src="photos/Furniturebuild3.jpg" alt="Furniture Assembly" loading="lazy"
+          onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><svg fill=\'none\' stroke=\'currentColor\' viewBox=\'0 0 24 24\'><path d=\'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z\'/></svg><span>Photo Loading</span></div>';">
+      </div>
+      <div class="gallery-overlay"><div class="overlay-text"><span>Furniture</span>Furniture Assembly</div></div>
+      <div class="gallery-info">
+        <h4>Furniture Assembly</h4>
+        <span class="gallery-tag">Furniture</span>
       </div>
     </div>
 
@@ -670,10 +676,221 @@
       </div>
     </div>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2026 MrfixitallOC - All rights reserved.</p>
-    <p style="margin-top: 1.25rem; font-size: 0.8rem; opacity: 0.55;">Built by <a href="https://appcatalyst.org" style="color: inherit; text-decoration: underline;" rel="noopener">App Catalyst LLC</a></p>
-  </footer>
+    <div class="gallery-item" data-category="electrical" onclick="openLightbox('photos/Lightfixture2.jpg', 'Light Fixture Upgrade', 'Electrical')">
+      <div class="gallery-img-wrap">
+        <img src="photos/Lightfixture2.jpg" alt="Light Fixture 2" loading="lazy"
+          onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><svg fill=\'none\' stroke=\'currentColor\' viewBox=\'0 0 24 24\'><path d=\'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z\'/></svg><span>Photo Loading</span></div>';">
+      </div>
+      <div class="gallery-overlay"><div class="overlay-text"><span>Electrical</span>Fixture Upgrade</div></div>
+      <div class="gallery-info">
+        <h4>Light Fixture Upgrade</h4>
+        <span class="gallery-tag">Electrical</span>
+      </div>
+    </div>
 
-    <div class="gallery-item" data-category="carpentry" onclick="openLightbox('photos/Scre
+    <div class="gallery-item" data-category="plumbing" onclick="openLightbox('photos/Newtoliet1.jpg', 'New Toilet Installation', 'Plumbing')">
+      <div class="gallery-img-wrap">
+        <img src="photos/Newtoliet1.jpg" alt="New Toilet" loading="lazy"
+          onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><svg fill=\'none\' stroke=\'currentColor\' viewBox=\'0 0 24 24\'><path d=\'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z\'/></svg><span>Photo Loading</span></div>';">
+      </div>
+      <div class="gallery-overlay"><div class="overlay-text"><span>Plumbing</span>Toilet Install</div></div>
+      <div class="gallery-info">
+        <h4>New Toilet Installation</h4>
+        <span class="gallery-tag">Plumbing</span>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-category="painting" onclick="openLightbox('photos/Paint.jpg', 'Interior Painting', 'Painting')">
+      <div class="gallery-img-wrap">
+        <img src="photos/Paint.jpg" alt="Painting" loading="lazy"
+          onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><svg fill=\'none\' stroke=\'currentColor\' viewBox=\'0 0 24 24\'><path d=\'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z\'/></svg><span>Photo Loading</span></div>';">
+      </div>
+      <div class="gallery-overlay"><div class="overlay-text"><span>Painting</span>Interior Paint</div></div>
+      <div class="gallery-info">
+        <h4>Interior Painting</h4>
+        <span class="gallery-tag">Painting</span>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-category="painting" onclick="openLightbox('photos/Painting1.jpg', 'Painting Project', 'Painting')">
+      <div class="gallery-img-wrap">
+        <img src="photos/Painting1.jpg" alt="Painting Project" loading="lazy"
+          onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><svg fill=\'none\' stroke=\'currentColor\' viewBox=\'0 0 24 24\'><path d=\'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z\'/></svg><span>Photo Loading</span></div>';">
+      </div>
+      <div class="gallery-overlay"><div class="overlay-text"><span>Painting</span>Paint Job</div></div>
+      <div class="gallery-info">
+        <h4>Painting Project</h4>
+        <span class="gallery-tag">Painting</span>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-category="carpentry" onclick="openLightbox('photos/Saloncarpentry1.jpg', 'Salon Carpentry Work', 'Carpentry')">
+      <div class="gallery-img-wrap">
+        <img src="photos/Saloncarpentry1.jpg" alt="Salon Carpentry" loading="lazy"
+          onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><svg fill=\'none\' stroke=\'currentColor\' viewBox=\'0 0 24 24\'><path d=\'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z\'/></svg><span>Photo Loading</span></div>';">
+      </div>
+      <div class="gallery-overlay"><div class="overlay-text"><span>Carpentry</span>Salon Build-Out</div></div>
+      <div class="gallery-info">
+        <h4>Salon Carpentry</h4>
+        <span class="gallery-tag">Carpentry</span>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-category="carpentry" onclick="openLightbox('photos/Screendoor1.jpg', 'Screen Door Installation', 'Carpentry')">
+      <div class="gallery-img-wrap">
+        <img src="photos/Screendoor1.jpg" alt="Screen Door" loading="lazy"
+          onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><svg fill=\'none\' stroke=\'currentColor\' viewBox=\'0 0 24 24\'><path d=\'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z\'/></svg><span>Photo Loading</span></div>';">
+      </div>
+      <div class="gallery-overlay"><div class="overlay-text"><span>Carpentry</span>Screen Door</div></div>
+      <div class="gallery-info">
+        <h4>Screen Door Install</h4>
+        <span class="gallery-tag">Carpentry</span>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-category="plumbing" onclick="openLightbox('photos/Shower-valve.jpg', 'Shower Valve Replacement', 'Plumbing')">
+      <div class="gallery-img-wrap">
+        <img src="photos/Shower-valve.jpg" alt="Shower Valve" loading="lazy"
+          onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><svg fill=\'none\' stroke=\'currentColor\' viewBox=\'0 0 24 24\'><path d=\'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z\'/></svg><span>Photo Loading</span></div>';">
+      </div>
+      <div class="gallery-overlay"><div class="overlay-text"><span>Plumbing</span>Shower Valve</div></div>
+      <div class="gallery-info">
+        <h4>Shower Valve Replacement</h4>
+        <span class="gallery-tag">Plumbing</span>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-category="plumbing" onclick="openLightbox('photos/Showerenclosure1.jpg', 'Shower Enclosure Install', 'Plumbing')">
+      <div class="gallery-img-wrap">
+        <img src="photos/Showerenclosure1.jpg" alt="Shower Enclosure" loading="lazy"
+          onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><svg fill=\'none\' stroke=\'currentColor\' viewBox=\'0 0 24 24\'><path d=\'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z\'/></svg><span>Photo Loading</span></div>';">
+      </div>
+      <div class="gallery-overlay"><div class="overlay-text"><span>Plumbing</span>Shower Enclosure</div></div>
+      <div class="gallery-info">
+        <h4>Shower Enclosure Install</h4>
+        <span class="gallery-tag">Plumbing</span>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-category="carpentry" onclick="openLightbox('photos/Stair-landing1.jpg', 'Stair Landing Repair', 'Carpentry')">
+      <div class="gallery-img-wrap">
+        <img src="photos/Stair-landing1.jpg" alt="Stair Landing" loading="lazy"
+          onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><svg fill=\'none\' stroke=\'currentColor\' viewBox=\'0 0 24 24\'><path d=\'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z\'/></svg><span>Photo Loading</span></div>';">
+      </div>
+      <div class="gallery-overlay"><div class="overlay-text"><span>Carpentry</span>Stair Landing</div></div>
+      <div class="gallery-info">
+        <h4>Stair Landing Repair</h4>
+        <span class="gallery-tag">Carpentry</span>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-category="tile" onclick="openLightbox('photos/Tile1.jpg', 'Tile Installation', 'Tile')">
+      <div class="gallery-img-wrap">
+        <img src="photos/Tile1.jpg" alt="Tile Work" loading="lazy"
+          onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><svg fill=\'none\' stroke=\'currentColor\' viewBox=\'0 0 24 24\'><path d=\'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z\'/></svg><span>Photo Loading</span></div>';">
+      </div>
+      <div class="gallery-overlay"><div class="overlay-text"><span>Tile</span>Tile Installation</div></div>
+      <div class="gallery-info">
+        <h4>Tile Installation</h4>
+        <span class="gallery-tag">Tile</span>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-category="repair" onclick="openLightbox('photos/powerwashing1.jpg', 'Power Washing Service', 'Repair')">
+      <div class="gallery-img-wrap">
+        <img src="photos/powerwashing1.jpg" alt="Power Washing" loading="lazy"
+          onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><svg fill=\'none\' stroke=\'currentColor\' viewBox=\'0 0 24 24\'><path d=\'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z\'/></svg><span>Photo Loading</span></div>';">
+      </div>
+      <div class="gallery-overlay"><div class="overlay-text"><span>Repair</span>Power Washing</div></div>
+      <div class="gallery-info">
+        <h4>Power Washing</h4>
+        <span class="gallery-tag">Repair</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-section">
+    <h2>Like What You See? <em>Let's Talk.</em></h2>
+    <p>Every job gets the same attention to detail you see here. Get your free estimate today.</p>
+    <div class="cta-buttons">
+      <a href="tel:7146616762" class="btn btn-primary" onclick="trackCall()">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+        Call (714) 661-6762
+      </a>
+      <a href="index.html#contact" class="btn btn-outline">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        Get a Free Estimate
+      </a>
+    </div>
+  </div>
+
+</main>
+
+<!-- ── LIGHTBOX ── -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+  <div class="lightbox-inner">
+    <button class="lightbox-close" onclick="closeLightbox()">✕ Close</button>
+    <img id="lightboxImg" src="" alt="">
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+  </div>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <p>&copy; 2025 MrfixitallOC — Professional Home Repairs in Orange County, CA</p>
+  <p style="margin-top: 0.5rem;">
+    <a href="tel:7146616762" onclick="trackCall()">(714) 661-6762</a> &nbsp;·&nbsp;
+    <a href="mailto:mrfixitalloc@gmail.com" onclick="trackEmail()">mrfixitalloc@gmail.com</a>
+  </p>
+</footer>
+
+<!-- ── FLOATING CALL ── -->
+<a href="tel:7146616762" class="floating-call" onclick="trackCall()">
+  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+  Call Now
+</a>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('navMenu').classList.toggle('active');
+  }
+
+  // Filter gallery by category
+  function filterGallery(category, btn) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.gallery-item').forEach(item => {
+      if (category === 'all' || item.dataset.category === category) {
+        item.classList.remove('hidden');
+      } else {
+        item.classList.add('hidden');
+      }
+    });
+    gtag('event', 'select_content', { event_category: 'Gallery Filter', event_label: category });
+  }
+
+  // Lightbox
+  function openLightbox(src, title, category) {
+    document.getElementById('lightboxImg').src = src;
+    document.getElementById('lightboxCaption').innerHTML = '<strong>' + title + '</strong> — ' + category;
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+    trackPhoto(title);
+  }
+
+  function closeLightbox(e) {
+    if (!e || e.target === document.getElementById('lightbox') || e.target.closest('.lightbox-close')) {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeLightbox();
+  });
+</script>
+
+</body>
+</html>
