@@ -5,28 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MrfixitallOC – Home Repairs & Handyman Services | Orange County, CA</title>
   <meta name="description" content="Professional handyman & home repair services in Orange County. State-certified journeyman carpenter, OSHA-10 certified. Plumbing, electrical, carpentry, tile & more. Call for a free estimate!">
+  <link rel="canonical" href="https://www.mrfixitalloc.com/">
 
-  <!-- Google Analytics 4 — Replace G-2F136BXQ5N with your real Measurement ID -->
+  <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-2F136BXQ5N"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-2F136BXQ5N');
-
-    // Conversion tracking helpers
-    function trackCall() {
-      gtag('event', 'conversion', { event_category: 'Lead', event_label: 'Phone Call Click' });
-    }
-    function trackEmail() {
-      gtag('event', 'conversion', { event_category: 'Lead', event_label: 'Email Click' });
-    }
-    function trackFormSubmit() {
-      gtag('event', 'conversion', { event_category: 'Lead', event_label: 'Contact Form Submit' });
-    }
-    function trackService(name) {
-      gtag('event', 'select_content', { content_type: 'service', item_id: name });
-    }
+    function trackCall() { gtag('event', 'conversion', { event_category: 'Lead', event_label: 'Phone Call Click' }); }
+    function trackEmail() { gtag('event', 'conversion', { event_category: 'Lead', event_label: 'Email Click' }); }
+    function trackFormSubmit() { gtag('event', 'conversion', { event_category: 'Lead', event_label: 'Contact Form Submit' }); }
+    function trackService(name) { gtag('event', 'select_content', { content_type: 'service', item_id: name }); }
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -49,526 +40,144 @@
       --shadow: 0 4px 24px rgba(26,37,53,0.10);
       --shadow-lg: 0 12px 40px rgba(26,37,53,0.16);
     }
-
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
     html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text); line-height: 1.6; overflow-x: hidden; }
 
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--cream);
-      color: var(--text);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    /* ─── NAVBAR ─── */
-    .navbar {
-      background: var(--navy);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      border-bottom: 2px solid var(--rust);
-    }
-    .nav-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.85rem 2rem;
-    }
-    .logo-link {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      text-decoration: none;
-      color: var(--white);
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.6rem;
-      letter-spacing: 1px;
-    }
-    .logo-img { height: 46px; width: auto; }
-    .logo-img-wrap {
-      width: 46px;
-      height: 46px;
-      border-radius: 8px;
-      background: var(--rust);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.1rem;
-      color: var(--white);
-      flex-shrink: 0;
-      overflow: hidden;
-    }
-    .logo-link .logo-sub {
-      display: flex;
-      flex-direction: column;
-      line-height: 1;
-    }
-    .logo-link .logo-sub span:last-child {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.6rem;
-      font-weight: 500;
-      letter-spacing: 2px;
-      color: var(--rust-light);
-      text-transform: uppercase;
-    }
+    /* NAVBAR */
+    .navbar { background: var(--navy); position: sticky; top: 0; z-index: 1000; border-bottom: 2px solid var(--rust); }
+    .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0.85rem 2rem; }
+    .logo-link { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: var(--white); font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; letter-spacing: 1px; }
+    .logo-img-wrap { width: 46px; height: 46px; border-radius: 8px; background: var(--rust); display: flex; align-items: center; justify-content: center; font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; color: var(--white); flex-shrink: 0; overflow: hidden; }
+    .logo-img { height: 46px; width: auto; display: block; }
+    .logo-sub { display: flex; flex-direction: column; line-height: 1; }
+    .logo-sub span:last-child { font-family: 'DM Sans', sans-serif; font-size: 0.6rem; font-weight: 500; letter-spacing: 2px; color: var(--rust-light); text-transform: uppercase; }
     .nav-menu { display: flex; gap: 0.25rem; list-style: none; align-items: center; }
-    .nav-menu a {
-      color: #CBD5E1;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 0.9rem;
-      padding: 0.5rem 0.9rem;
-      border-radius: 6px;
-      transition: all 0.2s;
-    }
+    .nav-menu a { color: #CBD5E1; text-decoration: none; font-weight: 500; font-size: 0.9rem; padding: 0.5rem 0.9rem; border-radius: 6px; transition: all 0.2s; }
     .nav-menu a:hover { color: var(--white); background: var(--navy-light); }
-    .nav-cta {
-      background: var(--rust) !important;
-      color: var(--white) !important;
-      padding: 0.5rem 1.2rem !important;
-      border-radius: 6px !important;
-      font-weight: 600 !important;
-    }
-    .nav-cta:hover { background: var(--rust-dark) !important; transform: none !important; }
+    .nav-cta { background: var(--rust) !important; color: var(--white) !important; padding: 0.5rem 1.2rem !important; border-radius: 6px !important; font-weight: 600 !important; }
+    .nav-cta:hover { background: var(--rust-dark) !important; }
 
-    .hamburger { display: none; }
-    
-
-    /* ─── HERO ─── */
-    .hero {
-      background: var(--navy);
-      color: var(--white);
-      padding: 5rem 2rem 4rem;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    }
-    .hero-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 420px;
-      gap: 4rem;
-      align-items: center;
-      position: relative;
-    }
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: rgba(181,83,26,0.2);
-      border: 1px solid rgba(181,83,26,0.4);
-      color: var(--rust-light);
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      padding: 0.35rem 0.9rem;
-      border-radius: 100px;
-      margin-bottom: 1.25rem;
-    }
-    .hero h1 {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(3rem, 6vw, 5rem);
-      line-height: 1.0;
-      letter-spacing: 1px;
-      margin-bottom: 1.25rem;
-    }
-    .hero h1 em {
-      font-style: normal;
-      color: var(--rust-light);
-    }
-    .hero-desc {
-      font-size: 1.1rem;
-      color: #94A3B8;
-      max-width: 500px;
-      margin-bottom: 2rem;
-    }
+    /* HERO */
+    .hero { background: var(--navy); color: var(--white); padding: 5rem 2rem 4rem; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+    .hero-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 420px; gap: 4rem; align-items: center; position: relative; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(181,83,26,0.2); border: 1px solid rgba(181,83,26,0.4); color: var(--rust-light); font-size: 0.8rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 100px; margin-bottom: 1.25rem; }
+    .hero h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3rem, 6vw, 5rem); line-height: 1.0; letter-spacing: 1px; margin-bottom: 1.25rem; }
+    .hero h1 em { font-style: normal; color: var(--rust-light); }
+    .hero-desc { font-size: 1.1rem; color: #94A3B8; max-width: 500px; margin-bottom: 2rem; }
     .hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
-
-    .trust-pills {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-    .trust-pill {
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-      font-size: 0.82rem;
-      color: #94A3B8;
-    }
+    .trust-pills { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .trust-pill { display: flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; color: #94A3B8; }
     .trust-pill svg { color: var(--rust-light); }
 
-    /* Hero form card */
-    .hero-form-card {
-      background: var(--white);
-      border-radius: 16px;
-      padding: 2rem;
-      box-shadow: var(--shadow-lg);
-      color: var(--text);
-    }
-    .hero-form-card h3 {
-      font-size: 1.3rem;
-      font-weight: 700;
-      margin-bottom: 0.25rem;
-      color: var(--navy);
-    }
-    .hero-form-card p {
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      margin-bottom: 1.5rem;
-    }
+    /* HERO FORM */
+    .hero-form-card { background: var(--white); border-radius: 16px; padding: 2rem; box-shadow: var(--shadow-lg); color: var(--text); }
+    .hero-form-card h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 0.25rem; color: var(--navy); }
+    .hero-form-card p { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.5rem; }
     .form-group { margin-bottom: 1rem; }
-    .form-group label {
-      display: block;
-      font-size: 0.82rem;
-      font-weight: 600;
-      color: var(--navy);
-      margin-bottom: 0.4rem;
-    }
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      width: 100%;
-      padding: 0.75rem 1rem;
-      border: 1.5px solid var(--border);
-      border-radius: 8px;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.95rem;
-      color: var(--text);
-      background: #F8FAFC;
-      transition: border-color 0.2s;
-      outline: none;
-    }
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      border-color: var(--rust);
-      background: var(--white);
-    }
+    .form-group label { display: block; font-size: 0.82rem; font-weight: 600; color: var(--navy); margin-bottom: 0.4rem; }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.75rem 1rem; border: 1.5px solid var(--border); border-radius: 8px; font-family: 'DM Sans', sans-serif; font-size: 0.95rem; color: var(--text); background: #F8FAFC; transition: border-color 0.2s; outline: none; }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--rust); background: var(--white); }
     .form-group textarea { resize: vertical; min-height: 80px; }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
-    .form-submit {
-      width: 100%;
-      padding: 0.9rem;
-      background: var(--rust);
-      color: var(--white);
-      border: none;
-      border-radius: 8px;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 1rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: all 0.2s;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      margin-top: 0.5rem;
-    }
-    .form-submit:hover { background: var(--rust-dark); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(181,83,26,0.35); }
+    .form-submit { width: 100%; padding: 0.9rem; background: var(--rust); color: var(--white); border: none; border-radius: 8px; font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 700; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-top: 0.5rem; }
+    .form-submit:hover { background: var(--rust-dark); transform: translateY(-1px); }
     .form-note { font-size: 0.75rem; color: var(--text-muted); text-align: center; margin-top: 0.75rem; }
+    .form-success { display: none; text-align: center; padding: 1.5rem; color: #15803D; background: #F0FDF4; border-radius: 10px; border: 1.5px solid #86EFAC; font-weight: 600; }
 
-    /* ─── STATS BAR ─── */
-    .stats-bar {
-      background: var(--rust);
-      color: var(--white);
-    }
-    .stats-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      divide-x: 1px solid rgba(255,255,255,0.2);
-    }
-    .stat-item {
-      padding: 1.5rem 2rem;
-      text-align: center;
-      border-right: 1px solid rgba(255,255,255,0.2);
-    }
+    /* STATS BAR */
+    .stats-bar { background: var(--rust); color: var(--white); }
+    .stats-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); }
+    .stat-item { padding: 1.5rem 2rem; text-align: center; border-right: 1px solid rgba(255,255,255,0.2); }
     .stat-item:last-child { border-right: none; }
-    .stat-num {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 2.2rem;
-      line-height: 1;
-      display: block;
-    }
-    .stat-label {
-      font-size: 0.8rem;
-      opacity: 0.85;
-      font-weight: 500;
-      letter-spacing: 0.5px;
-    }
+    .stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 2.2rem; line-height: 1; display: block; }
+    .stat-label { font-size: 0.8rem; opacity: 0.85; font-weight: 500; letter-spacing: 0.5px; }
 
-    /* ─── MAIN ─── */
+    /* MAIN */
     main { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; }
     .section { margin-bottom: 5rem; }
+    .section-eyebrow { font-size: 0.75rem; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--rust); margin-bottom: 0.5rem; }
+    .section-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2rem, 4vw, 2.8rem); color: var(--navy); letter-spacing: 0.5px; margin-bottom: 1rem; }
+    .section-subtitle { font-size: 1rem; color: var(--text-muted); max-width: 560px; margin-bottom: 2.5rem; }
 
-    .section-eyebrow {
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      color: var(--rust);
-      margin-bottom: 0.5rem;
-    }
-    .section-title {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(2rem, 4vw, 2.8rem);
-      color: var(--navy);
-      letter-spacing: 0.5px;
-      margin-bottom: 1rem;
-    }
-    .section-subtitle {
-      font-size: 1rem;
-      color: var(--text-muted);
-      max-width: 560px;
-      margin-bottom: 2.5rem;
-    }
-
-    /* ─── SERVICES ─── */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 1.25rem;
-    }
-    .service-card {
-      background: var(--white);
-      padding: 1.75rem;
-      border-radius: 12px;
-      border: 1.5px solid var(--border);
-      transition: all 0.25s;
-      cursor: default;
-      position: relative;
-      overflow: hidden;
-    }
-    .service-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 3px;
-      background: var(--rust);
-      transform: scaleX(0);
-      transition: transform 0.25s;
-    }
+    /* SERVICES */
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.25rem; }
+    .service-card { background: var(--white); padding: 1.75rem; border-radius: 12px; border: 1.5px solid var(--border); transition: all 0.25s; position: relative; overflow: hidden; }
+    .service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--rust); transform: scaleX(0); transition: transform 0.25s; }
     .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: #CBD5E1; }
     .service-card:hover::before { transform: scaleX(1); }
-    .service-icon-wrap {
-      width: 48px; height: 48px;
-      background: #FFF0E8;
-      border-radius: 10px;
-      display: flex; align-items: center; justify-content: center;
-      margin-bottom: 1rem;
-      color: var(--rust);
-    }
+    .service-icon-wrap { width: 48px; height: 48px; background: #FFF0E8; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; color: var(--rust); }
     .service-icon-wrap svg { width: 24px; height: 24px; }
     .service-card h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 0.35rem; }
     .service-card p { font-size: 0.88rem; color: var(--text-muted); }
 
-    /* ─── ABOUT / CREDENTIALS ─── */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: start;
-    }
+    /* ABOUT */
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
     .about-text p { font-size: 1rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 1rem; }
     .about-text strong { color: var(--navy); }
-
     .cred-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
-    .cred-list li {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      background: var(--white);
-      padding: 1rem 1.25rem;
-      border-radius: 10px;
-      border: 1.5px solid var(--border);
-      font-weight: 600;
-      font-size: 0.95rem;
-      color: var(--navy);
-    }
-    .cred-icon {
-      width: 36px; height: 36px;
-      background: #FFF0E8;
-      border-radius: 8px;
-      display: flex; align-items: center; justify-content: center;
-      color: var(--rust);
-      flex-shrink: 0;
-    }
+    .cred-list li { display: flex; align-items: center; gap: 1rem; background: var(--white); padding: 1rem 1.25rem; border-radius: 10px; border: 1.5px solid var(--border); font-weight: 600; font-size: 0.95rem; color: var(--navy); }
+    .cred-icon { width: 36px; height: 36px; background: #FFF0E8; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--rust); flex-shrink: 0; }
     .cred-icon svg { width: 18px; height: 18px; }
 
-    /* ─── VALUES ─── */
-    .values-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.25rem;
-    }
-    .value-card {
-      background: var(--white);
-      border-radius: 12px;
-      padding: 1.75rem;
-      border: 1.5px solid var(--border);
-      text-align: center;
-    }
+    /* VALUES */
+    .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+    .value-card { background: var(--white); border-radius: 12px; padding: 1.75rem; border: 1.5px solid var(--border); text-align: center; }
     .value-emoji { font-size: 2rem; margin-bottom: 0.75rem; display: block; }
     .value-card h4 { font-weight: 700; color: var(--navy); margin-bottom: 0.35rem; }
     .value-card p { font-size: 0.88rem; color: var(--text-muted); }
 
-    /* ─── FAQ ─── */
+    /* FAQ */
     .faq-list { display: flex; flex-direction: column; gap: 0.75rem; }
-    .faq-item {
-      background: var(--white);
-      border: 1.5px solid var(--border);
-      border-radius: 10px;
-      overflow: hidden;
-    }
-    .faq-q {
-      width: 100%; display: flex; justify-content: space-between; align-items: center;
-      padding: 1.25rem 1.5rem;
-      background: none; border: none; cursor: pointer;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 1rem; font-weight: 600; color: var(--navy);
-      text-align: left; gap: 1rem;
-      transition: color 0.2s;
-    }
+    .faq-item { background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; overflow: hidden; }
+    .faq-q { width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 1.5rem; background: none; border: none; cursor: pointer; font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 600; color: var(--navy); text-align: left; gap: 1rem; transition: color 0.2s; }
     .faq-q:hover { color: var(--rust); }
-    .faq-chevron {
-      width: 20px; height: 20px; flex-shrink: 0;
-      color: var(--text-muted);
-      transition: transform 0.3s;
-    }
+    .faq-chevron { width: 20px; height: 20px; flex-shrink: 0; color: var(--text-muted); transition: transform 0.3s; }
     .faq-item.open .faq-chevron { transform: rotate(180deg); color: var(--rust); }
-    .faq-a {
-      max-height: 0; overflow: hidden;
-      transition: max-height 0.35s ease, padding 0.2s;
-      padding: 0 1.5rem;
-      font-size: 0.95rem; color: var(--text-muted); line-height: 1.7;
-    }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.2s; padding: 0 1.5rem; font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; }
     .faq-item.open .faq-a { max-height: 300px; padding: 0 1.5rem 1.25rem; }
 
-    /* ─── CONTACT SECTION ─── */
-    .contact-section {
-      background: var(--navy);
-      border-radius: 20px;
-      padding: 3rem;
-      color: var(--white);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: start;
-    }
-    .contact-left h2 {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 2.5rem;
-      margin-bottom: 0.75rem;
-      letter-spacing: 0.5px;
-    }
+    /* CONTACT */
+    .contact-section { background: var(--navy); border-radius: 20px; padding: 3rem; color: var(--white); display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+    .contact-left h2 { font-family: 'Bebas Neue', sans-serif; font-size: 2.5rem; margin-bottom: 0.75rem; letter-spacing: 0.5px; }
     .contact-left h2 em { color: var(--rust-light); font-style: normal; }
     .contact-left p { color: #94A3B8; font-size: 0.95rem; margin-bottom: 2rem; }
     .contact-methods { display: flex; flex-direction: column; gap: 1rem; }
-    .contact-method {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      background: var(--navy-light);
-      border-radius: 10px;
-      padding: 1rem 1.25rem;
-      text-decoration: none;
-      color: var(--white);
-      font-weight: 600;
-      transition: all 0.2s;
-      border: 1px solid rgba(255,255,255,0.08);
-    }
+    .contact-method { display: flex; align-items: center; gap: 1rem; background: var(--navy-light); border-radius: 10px; padding: 1rem 1.25rem; text-decoration: none; color: var(--white); font-weight: 600; transition: all 0.2s; border: 1px solid rgba(255,255,255,0.08); }
     .contact-method:hover { background: var(--rust); transform: translateX(4px); }
-    .contact-method .cm-icon {
-      width: 40px; height: 40px;
-      background: rgba(255,255,255,0.1);
-      border-radius: 8px;
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-    }
+    .contact-method .cm-icon { width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
     .contact-method .cm-icon svg { width: 20px; height: 20px; }
     .cm-info span { display: block; }
     .cm-info .cm-label { font-size: 0.72rem; color: #94A3B8; text-transform: uppercase; letter-spacing: 1px; font-weight: 500; }
     .cm-info .cm-value { font-size: 1rem; font-weight: 700; }
-
     .contact-form-wrap { background: var(--white); border-radius: 14px; padding: 2rem; }
     .contact-form-wrap h3 { font-size: 1.1rem; font-weight: 700; color: var(--navy); margin-bottom: 1.25rem; }
 
-    /* ─── BUTTONS ─── */
-    .btn {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      padding: 0.875rem 1.75rem;
-      border-radius: 8px; font-weight: 700; font-size: 0.95rem;
-      cursor: pointer; border: none; text-decoration: none;
-      transition: all 0.2s; font-family: 'DM Sans', sans-serif;
-    }
+    /* BUTTONS */
+    .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.875rem 1.75rem; border-radius: 8px; font-weight: 700; font-size: 0.95rem; cursor: pointer; border: none; text-decoration: none; transition: all 0.2s; font-family: 'DM Sans', sans-serif; }
     .btn svg { width: 18px; height: 18px; }
     .btn-primary { background: var(--rust); color: var(--white); }
     .btn-primary:hover { background: var(--rust-dark); transform: translateY(-2px); box-shadow: 0 6px 16px rgba(181,83,26,0.35); }
     .btn-outline { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.35); }
     .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.1); }
-    .btn-light { background: var(--white); color: var(--navy); }
-    .btn-light:hover { background: var(--cream); transform: translateY(-2px); }
 
-    /* ─── FOOTER ─── */
-    footer {
-      background: var(--navy);
-      color: #94A3B8;
-      padding: 2rem;
-      text-align: center;
-      border-top: 2px solid var(--rust);
-      font-size: 0.88rem;
-    }
+    /* FOOTER */
+    footer { background: var(--navy); color: #94A3B8; padding: 2rem; text-align: center; border-top: 2px solid var(--rust); font-size: 0.88rem; }
     footer a { color: var(--rust-light); text-decoration: none; }
     footer a:hover { text-decoration: underline; }
 
-    /* ─── FLOATING CALL BUTTON (mobile) ─── */
-    .floating-call {
-      display: none;
-      position: fixed;
-      bottom: 1.5rem; right: 1.5rem;
-      background: var(--rust);
-      color: var(--white);
-      border-radius: 100px;
-      padding: 0.9rem 1.5rem;
-      font-weight: 700;
-      font-size: 0.95rem;
-      text-decoration: none;
-      box-shadow: 0 6px 20px rgba(181,83,26,0.45);
-      z-index: 999;
-      align-items: center;
-      gap: 0.5rem;
-      transition: all 0.2s;
-    }
-    .floating-call svg { width: 18px; height: 18px; }
-    .floating-call:hover { background: var(--rust-dark); transform: scale(1.05); }
+    /* BOTTOM TAB BAR */
+    .bottom-nav { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: var(--navy); border-top: 2px solid var(--rust); z-index: 1000; padding: 0.4rem 0 calc(0.4rem + env(safe-area-inset-bottom)); }
+    .bottom-nav-inner { display: flex; justify-content: space-around; align-items: center; max-width: 500px; margin: 0 auto; }
+    .bottom-tab { display: flex; flex-direction: column; align-items: center; gap: 0.2rem; text-decoration: none; color: #94A3B8; font-size: 0.62rem; font-weight: 600; letter-spacing: 0.3px; padding: 0.3rem 0.5rem; border-radius: 8px; transition: color 0.2s; min-width: 52px; text-align: center; }
+    .bottom-tab svg { width: 22px; height: 22px; }
+    .bottom-tab.active { color: var(--rust-light); }
+    .bottom-tab:hover { color: var(--white); }
+    .bottom-tab.tab-call { background: var(--rust); color: var(--white); border-radius: 12px; padding: 0.4rem 0.75rem; }
+    .bottom-tab.tab-call:hover { background: var(--rust-dark); color: var(--white); }
 
-    /* ─── SUCCESS MESSAGE ─── */
-    .form-success {
-      display: none;
-      text-align: center;
-      padding: 1.5rem;
-      color: #15803D;
-      background: #F0FDF4;
-      border-radius: 10px;
-      border: 1.5px solid #86EFAC;
-      font-weight: 600;
-    }
-
-    /* ─── RESPONSIVE ─── */
+    /* RESPONSIVE */
     @media (max-width: 900px) {
       .hero-inner { grid-template-columns: 1fr; }
       .hero-form-card { max-width: 480px; }
@@ -578,77 +187,22 @@
       .values-grid { grid-template-columns: 1fr; }
       .contact-section { grid-template-columns: 1fr; }
     }
+    @media (max-width: 768px) {
+      .bottom-nav { display: block; }
+      body { padding-bottom: 72px; }
+      .nav-menu .nav-cta { display: none; }
+    }
     @media (max-width: 640px) {
-      .hamburger { display: none; }
-      .nav-container { padding: 0.75rem 1rem; }
-      .nav-menu {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        flex-wrap: nowrap;
-        gap: 0.15rem;
-        scrollbar-width: none;
-      }
-      .nav-menu::-webkit-scrollbar { display: none; }
-      .nav-menu a { white-space: nowrap; font-size: 0.78rem; padding: 0.4rem 0.6rem; }
-      .nav-cta { padding: 0.4rem 0.8rem !important; font-size: 0.78rem !important; }
-      .logo-sub span:last-child { display: none; }
       .hero { padding: 3rem 1.25rem; }
       .stats-inner { grid-template-columns: repeat(2, 1fr); }
       .stat-item { padding: 1rem; }
       main { padding: 3rem 1.25rem; }
       .contact-section { padding: 1.75rem; }
       .form-row { grid-template-columns: 1fr; }
-      .floating-call { display: flex; }
-    }
-
-    /* ── BOTTOM TAB BAR (mobile only) ── */
-    .bottom-nav {
-      display: none;
-      position: fixed;
-      bottom: 0; left: 0; right: 0;
-      background: var(--navy);
-      border-top: 2px solid var(--rust);
-      z-index: 1000;
-      padding: 0.5rem 0 calc(0.5rem + env(safe-area-inset-bottom));
-    }
-    .bottom-nav-inner {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-    }
-    .bottom-tab {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.2rem;
-      text-decoration: none;
-      color: #94A3B8;
-      font-size: 0.65rem;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      padding: 0.3rem 0.5rem;
-      border-radius: 8px;
-      transition: color 0.2s;
-      min-width: 55px;
-      text-align: center;
-    }
-    .bottom-tab svg { width: 22px; height: 22px; }
-    .bottom-tab.active { color: var(--rust-light); }
-    .bottom-tab:hover { color: var(--white); }
-    .bottom-tab.tab-call {
-      background: var(--rust);
-      color: var(--white) !important;
-      border-radius: 100px;
-      padding: 0.5rem 0.75rem;
-    }
-    @media (max-width: 768px) {
-      .bottom-nav { display: block; }
-      body { padding-bottom: 75px; }
-      .floating-call { display: none !important; }
+      .logo-sub span:last-child { display: none; }
     }
   </style>
 
-  <!-- Structured Data - Business -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -658,72 +212,25 @@
     "url": "https://www.mrfixitalloc.com",
     "telephone": "+17146616762",
     "email": "mrfixitalloc@gmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Orange County",
-      "addressRegion": "CA",
-      "addressCountry": "US"
-    },
+    "address": { "@type": "PostalAddress", "addressLocality": "Orange County", "addressRegion": "CA", "addressCountry": "US" },
     "openingHours": "Mo-Sa 08:00-18:00",
-    "priceRange": "$$",
-    "sameAs": [
-      "https://www.facebook.com/yourpage",
-      "https://www.instagram.com/mrfixitalloc"
-    ]
-  }
-  </script>
-
-  <!-- Structured Data - FAQ -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How much does it cost to hire a handyman in Orange County?",
-        "acceptedAnswer": {"@type": "Answer","text": "Pricing depends on the type of work, but most home repair jobs start at an affordable hourly rate. Contact us for a free estimate tailored to your project."}
-      },
-      {
-        "@type": "Question",
-        "name": "What types of repairs do you handle?",
-        "acceptedAnswer": {"@type": "Answer","text": "I handle plumbing, electrical, carpentry, lighting, cabinetry, tile work, irrigation, landscaping, and general home maintenance."}
-      },
-      {
-        "@type": "Question",
-        "name": "Are you licensed or certified?",
-        "acceptedAnswer": {"@type": "Answer","text": "Yes, I am a state-certified journeyman carpenter and OSHA-10 certified, with years of hands-on experience in skilled trades."}
-      },
-      {
-        "@type": "Question",
-        "name": "Do you offer same-day or emergency handyman services?",
-        "acceptedAnswer": {"@type": "Answer","text": "In most cases, yes. If it's urgent, give me a call and I'll let you know the soonest I can arrive."}
-      },
-      {
-        "@type": "Question",
-        "name": "Which areas in Orange County do you serve?",
-        "acceptedAnswer": {"@type": "Answer","text": "I serve all of Orange County including Newport Beach, Costa Mesa, Huntington Beach, Irvine, and surrounding areas."}
-      }
-    ]
+    "priceRange": "$$"
   }
   </script>
 </head>
 <body>
 
-<!-- ── NAVBAR ── -->
 <nav class="navbar">
   <div class="nav-container">
     <a href="index.html" class="logo-link">
       <div class="logo-img-wrap">
-        <img src="photos/logo.png" alt="MrfixitallOC Logo" class="logo-img"
-          onerror="this.style.display='none'; this.parentNode.innerText='MF';">
+        <img src="photos/logo.png" alt="MrfixitallOC Logo" class="logo-img" onerror="this.style.display='none'; this.parentNode.innerText='MF';">
       </div>
       <div class="logo-sub">
         <span>MrfixitallOC</span>
         <span>Orange County's Handyman</span>
       </div>
     </a>
-
     <ul class="nav-menu" id="navMenu">
       <li><a href="index.html">Home</a></li>
       <li><a href="work.html">Recent Work</a></li>
@@ -734,14 +241,10 @@
   </div>
 </nav>
 
-<!-- ── HERO ── -->
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-left">
-      <div class="hero-badge">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        Serving Orange County Since Day One
-      </div>
+      <div class="hero-badge">⭐ Serving Orange County Since Day One</div>
       <h1>Your Home,<br><em>Fixed Right.</em></h1>
       <p class="hero-desc">State-certified journeyman carpenter & OSHA-10 pro. From leaky pipes to busted tiles — I fix it all, fast and fairly priced.</p>
       <div class="hero-buttons">
@@ -752,163 +255,67 @@
         <a href="#contact" class="btn btn-outline">Get a Free Estimate</a>
       </div>
       <div class="trust-pills">
-        <span class="trust-pill">
-          <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-          State-Certified Journeyman
-        </span>
-        <span class="trust-pill">
-          <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-          OSHA-10 Certified
-        </span>
-        <span class="trust-pill">
-          <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-          Free Estimates
-        </span>
-        <span class="trust-pill">
-          <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-          Same-Day Available
-        </span>
+        <span class="trust-pill"><svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>State-Certified Journeyman</span>
+        <span class="trust-pill"><svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>OSHA-10 Certified</span>
+        <span class="trust-pill"><svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Free Estimates</span>
+        <span class="trust-pill"><svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Same-Day Available</span>
       </div>
     </div>
-
-    <!-- Lead Capture Form -->
     <div class="hero-form-card">
       <h3>Get a Free Estimate</h3>
       <p>Tell us about your project — we'll get back to you fast!</p>
       <form id="heroForm" onsubmit="submitForm(event, 'heroForm')">
         <div class="form-row">
-          <div class="form-group">
-            <label for="h-name">Your Name *</label>
-            <input type="text" id="h-name" name="name" placeholder="Greg Smith" required>
-          </div>
-          <div class="form-group">
-            <label for="h-phone">Phone Number *</label>
-            <input type="tel" id="h-phone" name="phone" placeholder="(714) 555-0000" required>
-          </div>
+          <div class="form-group"><label>Your Name *</label><input type="text" name="name" placeholder="Greg Smith" required></div>
+          <div class="form-group"><label>Phone Number *</label><input type="tel" name="phone" placeholder="(714) 555-0000" required></div>
         </div>
         <div class="form-group">
-          <label for="h-service">Type of Service</label>
-          <select id="h-service" name="service" onchange="trackService(this.value)">
+          <label>Type of Service</label>
+          <select name="service" onchange="trackService(this.value)">
             <option value="">Select a service...</option>
-            <option>Electrical</option>
-            <option>Plumbing</option>
-            <option>Carpentry</option>
-            <option>Tile Work</option>
-            <option>Painting</option>
-            <option>Cabinetry</option>
-            <option>Irrigation</option>
-            <option>General Maintenance</option>
-            <option>Other</option>
+            <option>Electrical</option><option>Plumbing</option><option>Carpentry</option>
+            <option>Tile Work</option><option>Painting</option><option>Cabinetry</option>
+            <option>Irrigation</option><option>General Maintenance</option><option>Other</option>
           </select>
         </div>
-        <div class="form-group">
-          <label for="h-msg">Describe Your Project</label>
-          <textarea id="h-msg" name="message" placeholder="e.g. Leaking bathroom faucet, broken cabinet door..."></textarea>
-        </div>
+        <div class="form-group"><label>Describe Your Project</label><textarea name="message" placeholder="e.g. Leaking bathroom faucet, broken cabinet door..."></textarea></div>
         <button type="submit" class="form-submit">
           <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5" width="18" height="18"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
           Send My Request
         </button>
         <p class="form-note">🔒 No spam. We'll call or text you within a few hours.</p>
       </form>
-      <div class="form-success" id="heroSuccess">
-        ✅ Got it! We'll be in touch very soon.
-      </div>
+      <div class="form-success" id="heroSuccess">✅ Got it! We'll be in touch very soon.</div>
     </div>
   </div>
 </section>
 
-<!-- ── STATS BAR ── -->
 <div class="stats-bar">
   <div class="stats-inner">
-    <div class="stat-item">
-      <span class="stat-num">500+</span>
-      <span class="stat-label">Jobs Completed</span>
-    </div>
-    <div class="stat-item">
-      <span class="stat-num">10+</span>
-      <span class="stat-label">Years Experience</span>
-    </div>
-    <div class="stat-item">
-      <span class="stat-num">8</span>
-      <span class="stat-label">Service Types</span>
-    </div>
-    <div class="stat-item">
-      <span class="stat-num">5★</span>
-      <span class="stat-label">Customer Rating</span>
-    </div>
+    <div class="stat-item"><span class="stat-num">500+</span><span class="stat-label">Jobs Completed</span></div>
+    <div class="stat-item"><span class="stat-num">10+</span><span class="stat-label">Years Experience</span></div>
+    <div class="stat-item"><span class="stat-num">8</span><span class="stat-label">Service Types</span></div>
+    <div class="stat-item"><span class="stat-num">5★</span><span class="stat-label">Customer Rating</span></div>
   </div>
 </div>
 
-<!-- ── MAIN CONTENT ── -->
 <main>
-
-  <!-- SERVICES -->
   <section class="section" id="services">
     <p class="section-eyebrow">What We Do</p>
     <h2 class="section-title">Services We Offer</h2>
     <p class="section-subtitle">From quick fixes to full projects — if it's broken, we fix it.</p>
     <div class="services-grid">
-      <div class="service-card" onclick="trackService('Electrical')">
-        <div class="service-icon-wrap">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-        </div>
-        <h3>Electrical</h3>
-        <p>Lighting, fixtures, outlets, fans & electrical repairs done safely.</p>
-      </div>
-      <div class="service-card" onclick="trackService('Plumbing')">
-        <div class="service-icon-wrap">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
-        </div>
-        <h3>Plumbing</h3>
-        <p>Pipes, faucets, toilets, water heaters & leak repairs.</p>
-      </div>
-      <div class="service-card" onclick="trackService('Carpentry')">
-        <div class="service-icon-wrap">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M3 10h18M3 14h18M10 3v18M14 3v18" stroke-linecap="round"/></svg>
-        </div>
-        <h3>Carpentry</h3>
-        <p>Custom woodwork, framing, trim, doors & structural repairs.</p>
-      </div>
-      <div class="service-card" onclick="trackService('Tile Work')">
-        <div class="service-icon-wrap">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>
-        </div>
-        <h3>Tile Work</h3>
-        <p>Tile installation, grout repair & bathroom/kitchen restoration.</p>
-      </div>
-      <div class="service-card" onclick="trackService('Painting')">
-        <div class="service-icon-wrap">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
-        </div>
-        <h3>Painting</h3>
-        <p>Interior & exterior painting with clean, professional results.</p>
-      </div>
-      <div class="service-card" onclick="trackService('Cabinetry')">
-        <div class="service-icon-wrap">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-        </div>
-        <h3>Cabinetry</h3>
-        <p>Cabinet install, repair, hinges, handles & custom storage.</p>
-      </div>
-      <div class="service-card" onclick="trackService('Irrigation')">
-        <div class="service-icon-wrap">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
-        </div>
-        <h3>Irrigation</h3>
-        <p>Sprinkler systems, drip lines, timers & irrigation repair.</p>
-      </div>
-      <div class="service-card" onclick="trackService('General Maintenance')">
-        <div class="service-icon-wrap">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-        </div>
-        <h3>General Maintenance</h3>
-        <p>All other home repairs & odd jobs — if it needs fixing, call us.</p>
-      </div>
+      <div class="service-card" onclick="trackService('Electrical')"><div class="service-icon-wrap"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div><h3>Electrical</h3><p>Lighting, fixtures, outlets, fans & electrical repairs done safely.</p></div>
+      <div class="service-card" onclick="trackService('Plumbing')"><div class="service-icon-wrap"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg></div><h3>Plumbing</h3><p>Pipes, faucets, toilets, water heaters & leak repairs.</p></div>
+      <div class="service-card" onclick="trackService('Carpentry')"><div class="service-icon-wrap"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M3 10h18M3 14h18M10 3v18M14 3v18" stroke-linecap="round"/></svg></div><h3>Carpentry</h3><p>Custom woodwork, framing, trim, doors & structural repairs.</p></div>
+      <div class="service-card" onclick="trackService('Tile Work')"><div class="service-icon-wrap"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg></div><h3>Tile Work</h3><p>Tile installation, grout repair & bathroom/kitchen restoration.</p></div>
+      <div class="service-card" onclick="trackService('Painting')"><div class="service-icon-wrap"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg></div><h3>Painting</h3><p>Interior & exterior painting with clean, professional results.</p></div>
+      <div class="service-card" onclick="trackService('Cabinetry')"><div class="service-icon-wrap"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><h3>Cabinetry</h3><p>Cabinet install, repair, hinges, handles & custom storage.</p></div>
+      <div class="service-card" onclick="trackService('Irrigation')"><div class="service-icon-wrap"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg></div><h3>Irrigation</h3><p>Sprinkler systems, drip lines, timers & irrigation repair.</p></div>
+      <div class="service-card" onclick="trackService('General Maintenance')"><div class="service-icon-wrap"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div><h3>General Maintenance</h3><p>All other home repairs & odd jobs — if it needs fixing, call us.</p></div>
     </div>
   </section>
 
-  <!-- ABOUT + CREDENTIALS -->
   <section class="section" id="about">
     <div class="about-grid">
       <div class="about-text">
@@ -922,108 +329,38 @@
       <div>
         <p class="section-eyebrow" style="margin-bottom: 1rem;">Credentials</p>
         <ul class="cred-list">
-          <li>
-            <span class="cred-icon">
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            </span>
-            State-Certified Journeyman Carpenter
-          </li>
-          <li>
-            <span class="cred-icon">
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            </span>
-            OSHA-10 Certified
-          </li>
-          <li>
-            <span class="cred-icon">
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            </span>
-            10+ Years Skilled Trades Experience
-          </li>
-          <li>
-            <span class="cred-icon">
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            </span>
-            500+ Successful Projects
-          </li>
-          <li>
-            <span class="cred-icon">
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            </span>
-            Free Estimates — No Obligation
-          </li>
+          <li><span class="cred-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></span>State-Certified Journeyman Carpenter</li>
+          <li><span class="cred-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></span>OSHA-10 Certified</li>
+          <li><span class="cred-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></span>10+ Years Skilled Trades Experience</li>
+          <li><span class="cred-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></span>500+ Successful Projects</li>
+          <li><span class="cred-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></span>Free Estimates — No Obligation</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- VALUES -->
   <section class="section">
     <p class="section-eyebrow">Why Choose Us</p>
     <h2 class="section-title">Our Values</h2>
     <div class="values-grid">
-      <div class="value-card">
-        <span class="value-emoji">🤝</span>
-        <h4>Integrity</h4>
-        <p>Fair prices, honest advice, and no hidden fees. Ever.</p>
-      </div>
-      <div class="value-card">
-        <span class="value-emoji">⚡</span>
-        <h4>Speed</h4>
-        <p>Same-day availability for urgent repairs when you need it most.</p>
-      </div>
-      <div class="value-card">
-        <span class="value-emoji">🏆</span>
-        <h4>Quality</h4>
-        <p>Every job done right the first time — we stand behind our work.</p>
-      </div>
+      <div class="value-card"><span class="value-emoji">🤝</span><h4>Integrity</h4><p>Fair prices, honest advice, and no hidden fees. Ever.</p></div>
+      <div class="value-card"><span class="value-emoji">⚡</span><h4>Speed</h4><p>Same-day availability for urgent repairs when you need it most.</p></div>
+      <div class="value-card"><span class="value-emoji">🏆</span><h4>Quality</h4><p>Every job done right the first time — we stand behind our work.</p></div>
     </div>
   </section>
 
-  <!-- FAQ -->
   <section class="section" id="faq">
     <p class="section-eyebrow">Common Questions</p>
     <h2 class="section-title">FAQ</h2>
     <div class="faq-list">
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          How much does it cost to hire a handyman in Orange County?
-          <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg>
-        </button>
-        <div class="faq-a">Pricing depends on the type of work, but most home repair jobs start at an affordable hourly rate. Contact us for a free estimate tailored to your specific project — no obligation, no pressure.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          What types of repairs do you handle?
-          <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg>
-        </button>
-        <div class="faq-a">I handle a wide range of repairs including plumbing, electrical, carpentry, lighting, cabinetry, tile work, irrigation, landscaping, painting, and general home maintenance. If it needs fixing, there's a good chance I can help.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          Are you licensed or certified?
-          <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg>
-        </button>
-        <div class="faq-a">Yes! I'm a state-certified journeyman carpenter and OSHA-10 certified, with years of hands-on experience across all skilled trades. You can hire with confidence.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          Do you offer same-day or emergency handyman services?
-          <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg>
-        </button>
-        <div class="faq-a">In most cases, yes. If it's urgent, give me a call directly at (714) 661-6762 and I'll let you know the soonest I can arrive. I do my best to accommodate emergencies.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          Which areas in Orange County do you serve?
-          <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg>
-        </button>
-        <div class="faq-a">I serve all of Orange County including Newport Beach, Costa Mesa, Huntington Beach, Irvine, Anaheim, Santa Ana, Laguna Beach, and surrounding cities. Not sure if I cover your area? Just call!</div>
-      </div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How much does it cost to hire a handyman in Orange County?<svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg></button><div class="faq-a">Pricing depends on the type of work, but most home repair jobs start at an affordable hourly rate. Contact us for a free estimate tailored to your specific project — no obligation, no pressure.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What types of repairs do you handle?<svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg></button><div class="faq-a">I handle plumbing, electrical, carpentry, lighting, cabinetry, tile work, irrigation, landscaping, painting, and general home maintenance.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Are you licensed or certified?<svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg></button><div class="faq-a">Yes! I'm a state-certified journeyman carpenter and OSHA-10 certified, with years of hands-on experience across all skilled trades.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do you offer same-day or emergency services?<svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg></button><div class="faq-a">In most cases yes. Call me directly at (714) 661-6762 for urgent repairs and I'll let you know the soonest I can arrive.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Which areas in Orange County do you serve?<svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg></button><div class="faq-a">I serve all of Orange County including Newport Beach, Costa Mesa, Huntington Beach, Irvine, Anaheim, Santa Ana, Laguna Beach & surrounding cities.</div></div>
     </div>
   </section>
 
-  <!-- CONTACT SECTION -->
   <section class="section" id="contact">
     <div class="contact-section">
       <div class="contact-left">
@@ -1032,22 +369,12 @@
         <p>Call, email, or fill out the form — we'll get back to you fast with a free estimate and no obligation.</p>
         <div class="contact-methods">
           <a href="tel:7146616762" class="contact-method" onclick="trackCall()">
-            <span class="cm-icon">
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-            </span>
-            <span class="cm-info">
-              <span class="cm-label">Call or Text</span>
-              <span class="cm-value">(714) 661-6762</span>
-            </span>
+            <span class="cm-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg></span>
+            <span class="cm-info"><span class="cm-label">Call or Text</span><span class="cm-value">(714) 661-6762</span></span>
           </a>
-          <a href="/cdn-cgi/l/email-protection#deb3acb8b7a6b7aabfb2b2b1bd9eb9b3bfb7b2f0bdb1b3" class="contact-method" onclick="trackEmail()">
-            <span class="cm-icon">
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-            </span>
-            <span class="cm-info">
-              <span class="cm-label">Email Us</span>
-              <span class="cm-value"><span class="__cf_email__" data-cfemail="bed3ccd8d7c6d7cadfd2d2d1ddfed9d3dfd7d290ddd1d3">[email&#160;protected]</span></span>
-            </span>
+          <a href="mailto:mrfixitalloc@gmail.com" class="contact-method" onclick="trackEmail()">
+            <span class="cm-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></span>
+            <span class="cm-info"><span class="cm-label">Email Us</span><span class="cm-value">mrfixitalloc@gmail.com</span></span>
           </a>
         </div>
       </div>
@@ -1055,74 +382,66 @@
         <h3>Send Us a Message</h3>
         <form id="contactForm" onsubmit="submitForm(event, 'contactForm')">
           <div class="form-row">
-            <div class="form-group">
-              <label>Name *</label>
-              <input type="text" name="name" placeholder="Your name" required>
-            </div>
-            <div class="form-group">
-              <label>Phone *</label>
-              <input type="tel" name="phone" placeholder="(714) 555-0000" required>
-            </div>
+            <div class="form-group"><label>Name *</label><input type="text" name="name" placeholder="Your name" required></div>
+            <div class="form-group"><label>Phone *</label><input type="tel" name="phone" placeholder="(714) 555-0000" required></div>
           </div>
-          <div class="form-group">
-            <label>Email</label>
-            <input type="email" name="email" placeholder="you@email.com">
-          </div>
+          <div class="form-group"><label>Email</label><input type="email" name="email" placeholder="you@email.com"></div>
           <div class="form-group">
             <label>Service Needed</label>
             <select name="service" onchange="trackService(this.value)">
               <option value="">Select a service...</option>
-              <option>Electrical</option>
-              <option>Plumbing</option>
-              <option>Carpentry</option>
-              <option>Tile Work</option>
-              <option>Painting</option>
-              <option>Cabinetry</option>
-              <option>Irrigation</option>
-              <option>General Maintenance</option>
-              <option>Other</option>
+              <option>Electrical</option><option>Plumbing</option><option>Carpentry</option>
+              <option>Tile Work</option><option>Painting</option><option>Cabinetry</option>
+              <option>Irrigation</option><option>General Maintenance</option><option>Other</option>
             </select>
           </div>
-          <div class="form-group">
-            <label>Message</label>
-            <textarea name="message" placeholder="Describe what needs to be fixed..."></textarea>
-          </div>
+          <div class="form-group"><label>Message</label><textarea name="message" placeholder="Describe what needs to be fixed..."></textarea></div>
           <button type="submit" class="form-submit">
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5" width="18" height="18"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
             Send Message
           </button>
         </form>
-        <div class="form-success" id="contactSuccess">
-          ✅ Message sent! We'll follow up shortly.
-        </div>
+        <div class="form-success" id="contactSuccess">✅ Message sent! We'll follow up shortly.</div>
       </div>
     </div>
   </section>
-
 </main>
 
-<!-- ── FOOTER ── -->
 <footer>
   <p>&copy; 2025 MrfixitallOC — Professional Home Repairs in Orange County, CA</p>
   <p style="margin-top: 0.5rem;">
     <a href="tel:7146616762" onclick="trackCall()">(714) 661-6762</a> &nbsp;·&nbsp;
-    <a href="/cdn-cgi/l/email-protection#066b74606f7e6f72676a6a696546616b676f6a2865696b" onclick="trackEmail()"><span class="__cf_email__" data-cfemail="7b16091d1203120f1a171714183b1c161a121755181416">[email&#160;protected]</span></a>
+    <a href="mailto:mrfixitalloc@gmail.com" onclick="trackEmail()">mrfixitalloc@gmail.com</a>
   </p>
 </footer>
 
-<!-- ── FLOATING CALL BUTTON (mobile only) ── -->
-<a href="tel:7146616762" class="floating-call" onclick="trackCall()">
-  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-  Call Now
-</a>
+<!-- BOTTOM TAB BAR -->
+<nav class="bottom-nav">
+  <div class="bottom-nav-inner">
+    <a href="index.html" class="bottom-tab active">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+      Home
+    </a>
+    <a href="work.html" class="bottom-tab">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+      Work
+    </a>
+    <a href="tel:7146616762" class="bottom-tab tab-call" onclick="trackCall()">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+      Call
+    </a>
+    <a href="faq.html" class="bottom-tab">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      Q&A
+    </a>
+    <a href="testimonials.html" class="bottom-tab">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
+      Reviews
+    </a>
+  </div>
+</nav>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  // Mobile nav toggle
-  function toggleMenu() {
-    document.getElementById('navMenu').classList.toggle('active');
-  }
-
-  // FAQ accordion
+<script>
   function toggleFaq(btn) {
     const item = btn.closest('.faq-item');
     const isOpen = item.classList.contains('open');
@@ -1130,43 +449,31 @@
     if (!isOpen) item.classList.add('open');
   }
 
-  // Form submission handler — powered by Formspree
   async function submitForm(e, formId) {
     e.preventDefault();
     const form = e.target;
     const successId = formId === 'heroForm' ? 'heroSuccess' : 'contactSuccess';
     const btn = form.querySelector('.form-submit');
-
-    // Track conversion in GA4
+    const originalHTML = btn.innerHTML;
     trackFormSubmit();
-
-    // Show loading state
-    const originalText = btn.innerHTML;
     btn.innerHTML = 'Sending...';
     btn.disabled = true;
-
     try {
-      const data = new FormData(form);
       const response = await fetch('https://formspree.io/f/mbdabzgq', {
         method: 'POST',
-        body: data,
+        body: new FormData(form),
         headers: { 'Accept': 'application/json' }
       });
-
       if (response.ok) {
         form.style.display = 'none';
         document.getElementById(successId).style.display = 'block';
-      } else {
-        throw new Error('Server error');
-      }
-    } catch (err) {
-      btn.innerHTML = originalText;
+      } else { throw new Error('error'); }
+    } catch {
+      btn.innerHTML = originalHTML;
       btn.disabled = false;
-      alert('Something went wrong. Please call us directly at (714) 661-6762.');
+      alert('Something went wrong. Please call us at (714) 661-6762.');
     }
   }
-
-  // Animate stats on scroll
-  const statNums = document.querySelectorAll('.stat-num');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEa
+</script>
+</body>
+</html>
