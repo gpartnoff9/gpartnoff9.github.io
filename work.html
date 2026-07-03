@@ -3,25 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Recent Work \u2013 MrfixitallOC | Orange County Handyman Portfolio</title>
-  <meta name="description" content="See real work completed by MrfixitallOC across Orange County. Plumbing, electrical, carpentry, tile, painting, furniture builds and more.">
-
-  <!-- Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2F136BXQ5N"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-2F136BXQ5N');
-    function trackCall() { gtag('event', 'conversion', { event_category: 'Lead', event_label: 'Phone Call Click' }); }
-    function trackEmail() { gtag('event', 'conversion', { event_category: 'Lead', event_label: 'Email Click' }); }
-    function trackPhoto(name) { gtag('event', 'view_item', { event_category: 'Portfolio', event_label: name }); }
-  </script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+  <title>Recent Work - MrfixitallOC | Home Repair Galleries in Orange County</title>
+  <meta name="description" content="Browse recent home repair galleries in Orange County by MrfixitallOC. Painting, plumbing, electrical, carpentry, repairs, and furniture projects."/>
+  <meta name="keywords" content="handyman portfolio Orange County, home repair work, carpentry projects, MrfixitallOC galleries"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://www.mrfixitalloc.com/work.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Recent Work - MrfixitallOC"/>
+  <meta property="og:description" content="Real home repair projects completed in Orange County by a state-certified journeyman carpenter."/>
+  <meta property="og:url" content="https://www.mrfixitalloc.com/work.html"/>
+  <meta property="og:image" content="https://www.mrfixitalloc.com/photos/logo.png"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
     :root {
       --rust: #B5531A;
@@ -604,15 +599,14 @@
       </div>
     </div>
 
-    <div class="gallery-item" data-category="furniture" onclick="openLightbox('photos/Furniturebuild3.jpg', 'Furniture Assembly', 'Furniture')">
-      <div class="gallery-img-wrap">
-        <img src="photos/Furniturebuild3.jpg" alt="Furniture Assembly" loading="lazy"
-          onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><svg fill=\'none\' stroke=\'currentColor\' viewBox=\'0 0 24 24\'><path d=\'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z\'/></svg><span>Photo Loading</span></div>';">
-      </div>
-      <div class="gallery-overlay"><div class="overlay-text"><span>Furniture</span>Furniture Assembly</div></div>
-      <div class="gallery-info">
-        <h4>Furniture Assembly</h4>
-        <span class="gallery-tag">Furniture</span>
+  <!-- Category Grid -->
+  <section class="grid">
+    <!-- Painting -->
+    <div class="card">
+      <img src="photos/Painting1.jpg" alt="Painting preview">
+      <img src="photos/Paint.jpg" alt="Painting preview">
+      <div class="card-body">
+        <a href="gallery-painting.html">Painting</a>
       </div>
     </div>
 
@@ -676,64 +670,10 @@
       </div>
     </div>
 
-    <div class="gallery-item" data-category="electrical" onclick="openLightbox('photos/Lightfixture2.jpg', 'Light Fixture Upgrade', 'Electrical')">
-      <div class="gallery-img-wrap">
-        <img src="photos/Lightfixture2.jpg" alt="Light Fixture 2" loading="lazy"
-          onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><svg fill=\'none\' stroke=\'currentColor\' viewBox=\'0 0 24 24\'><path d=\'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z\'/></svg><span>Photo Loading</span></div>';">
-      </div>
-      <div class="gallery-overlay"><div class="overlay-text"><span>Electrical</span>Fixture Upgrade</div></div>
-      <div class="gallery-info">
-        <h4>Light Fixture Upgrade</h4>
-        <span class="gallery-tag">Electrical</span>
-      </div>
-    </div>
-
-    <div class="gallery-item" data-category="plumbing" onclick="openLightbox('photos/Newtoliet1.jpg', 'New Toilet Installation', 'Plumbing')">
-      <div class="gallery-img-wrap">
-        <img src="photos/Newtoliet1.jpg" alt="New Toilet" loading="lazy"
-          onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><svg fill=\'none\' stroke=\'currentColor\' viewBox=\'0 0 24 24\'><path d=\'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z\'/></svg><span>Photo Loading</span></div>';">
-      </div>
-      <div class="gallery-overlay"><div class="overlay-text"><span>Plumbing</span>Toilet Install</div></div>
-      <div class="gallery-info">
-        <h4>New Toilet Installation</h4>
-        <span class="gallery-tag">Plumbing</span>
-      </div>
-    </div>
-
-    <div class="gallery-item" data-category="painting" onclick="openLightbox('photos/Paint.jpg', 'Interior Painting', 'Painting')">
-      <div class="gallery-img-wrap">
-        <img src="photos/Paint.jpg" alt="Painting" loading="lazy"
-          onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><svg fill=\'none\' stroke=\'currentColor\' viewBox=\'0 0 24 24\'><path d=\'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z\'/></svg><span>Photo Loading</span></div>';">
-      </div>
-      <div class="gallery-overlay"><div class="overlay-text"><span>Painting</span>Interior Paint</div></div>
-      <div class="gallery-info">
-        <h4>Interior Painting</h4>
-        <span class="gallery-tag">Painting</span>
-      </div>
-    </div>
-
-    <div class="gallery-item" data-category="painting" onclick="openLightbox('photos/Painting1.jpg', 'Painting Project', 'Painting')">
-      <div class="gallery-img-wrap">
-        <img src="photos/Painting1.jpg" alt="Painting Project" loading="lazy"
-          onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><svg fill=\'none\' stroke=\'currentColor\' viewBox=\'0 0 24 24\'><path d=\'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z\'/></svg><span>Photo Loading</span></div>';">
-      </div>
-      <div class="gallery-overlay"><div class="overlay-text"><span>Painting</span>Paint Job</div></div>
-      <div class="gallery-info">
-        <h4>Painting Project</h4>
-        <span class="gallery-tag">Painting</span>
-      </div>
-    </div>
-
-    <div class="gallery-item" data-category="carpentry" onclick="openLightbox('photos/Saloncarpentry1.jpg', 'Salon Carpentry Work', 'Carpentry')">
-      <div class="gallery-img-wrap">
-        <img src="photos/Saloncarpentry1.jpg" alt="Salon Carpentry" loading="lazy"
-          onerror="this.parentNode.innerHTML='<div class=\'img-placeholder\'><svg fill=\'none\' stroke=\'currentColor\' viewBox=\'0 0 24 24\'><path d=\'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z\'/></svg><span>Photo Loading</span></div>';">
-      </div>
-      <div class="gallery-overlay"><div class="overlay-text"><span>Carpentry</span>Salon Build-Out</div></div>
-      <div class="gallery-info">
-        <h4>Salon Carpentry</h4>
-        <span class="gallery-tag">Carpentry</span>
-      </div>
-    </div>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 MrfixitallOC - All rights reserved.</p>
+    <p style="margin-top: 1.25rem; font-size: 0.8rem; opacity: 0.55;">Built by <a href="https://appcatalyst.org" style="color: inherit; text-decoration: underline;" rel="noopener">App Catalyst LLC</a></p>
+  </footer>
 
     <div class="gallery-item" data-category="carpentry" onclick="openLightbox('photos/Scre
